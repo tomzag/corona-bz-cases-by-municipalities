@@ -1,0 +1,16 @@
+{
+    "name": "corona-bz-cases-by-municipalities",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "author": "Thomas Zagler",
+    "license": "ISC",
+    "dependencies": {
+        "fs-extra": "^9.0.1",
+        "node-fetch": "^2.6.0",
+        "xlsx": "^0.16.6"
+    }
+}
