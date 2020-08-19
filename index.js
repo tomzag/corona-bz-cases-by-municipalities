@@ -154,7 +154,32 @@ function main() {
                     cellTotalCuredYesterday = "G" + i,
                     cellDeceased = "J" + i,
                     cellActivePositives = "K" + i;
+                cellMunicipalityUnknownToday = "F" + i;
+                cellTotalPositivesOfAllMunicipalitiesToday = "F" + i;
+                cellTotalPositivesOfAllMunicipalitiesUntilToday = "E" + i;
+                cellTotalCuredUntilToday = "H" + i;
+                cellTotalDeceasedUntilToday = "J" + i;
+                cellTotalActivePositivesUntilToday = "K" + i;
+
                 if (sheetContent[cellMunicipality] !== undefined) {
+                    // Get rows which contain the string "Comune sconosciuto Totale"
+                    if (sheetContent[cellMunicipality].v.includes("Comune sconosciuto Totale")) {
+                        covid_data.push({
+                            municipalityUnknownToday: sheetContent[cellMunicipalityUnknownToday].v,
+                        });
+                    }
+                    // Get rows which contain the string "Totale complessivo"
+                    if (sheetContent[cellMunicipality].v.includes("Totale complessivo")) {
+                        covid_data.push({
+                            totalSum: {
+                                positivesUntilToday: sheetContent[cellTotalPositivesOfAllMunicipalitiesUntilToday].v,
+                                positivesToday: sheetContent[cellTotalPositivesOfAllMunicipalitiesToday].v,
+                                curedUntilToday: sheetContent[cellTotalCuredUntilToday].v,
+                                deceasedUntilToday: sheetContent[cellTotalDeceasedUntilToday].v,
+                                activePostitivesUntilToday: sheetContent[cellTotalActivePositivesUntilToday].v,
+                            },
+                        });
+                    }
                     // Get rows which contain the string "Totale"
                     if (sheetContent[cellMunicipality].v.includes("Totale")) {
                         if (
@@ -190,18 +215,18 @@ function main() {
                 todaysDate_formatted = formatDate(todaysDate);
 
             // check if data is from today
-            if (newestDateInSheet_formatted === todaysDate_formatted) {
-                //save in file
-                fse.outputFile(`output/${newestDateInSheet_formatted}.json`, JSON.stringify(covid_data), (err) => {
-                    if (err) {
-                        console.log(err);
-                    } else {
-                        console.log("The file was saved!");
-                    }
-                });
-            } else {
-                console.log("Data is not from today!");
-            }
+            // if (newestDateInSheet_formatted === todaysDate_formatted) {
+            //save in file
+            fse.outputFile(`output/${newestDateInSheet_formatted}.json`, JSON.stringify(covid_data), (err) => {
+                if (err) {
+                    console.log(err);
+                } else {
+                    console.log("The file was saved!");
+                }
+            });
+            // } else {
+            //     console.log("Data is not from today!");
+            // }
         })
         .catch((error) => {
             console.log(error);
