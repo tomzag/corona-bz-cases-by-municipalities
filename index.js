@@ -4,7 +4,7 @@ const fse = require("fs-extra");
 
 // Scrape data from this URL
 // URL has to be changed manually every day
-const url = "http://www.provinz.bz.it/news/de/news.asp?news_action=300&news_image_id=1077577";
+const url = "http://www.provinz.bz.it/news/de/news.asp?news_action=300&news_image_id=1077646";
 
 const listOfMunicipalities = [
     "ALDINO",
@@ -215,7 +215,7 @@ function main() {
                 todaysDate_formatted = formatDate(todaysDate);
 
             // check if data is from today
-            // if (newestDateInSheet_formatted === todaysDate_formatted) {
+            if (newestDateInSheet_formatted === todaysDate_formatted) {
             //save in file
             fse.outputFile(`output/${newestDateInSheet_formatted}.json`, JSON.stringify(covid_data), (err) => {
                 if (err) {
@@ -224,9 +224,9 @@ function main() {
                     console.log("The file was saved!");
                 }
             });
-            // } else {
-            //     console.log("Data is not from today!");
-            // }
+            } else {
+                console.log("Data is not from today!");
+            }
         })
         .catch((error) => {
             console.log(error);
