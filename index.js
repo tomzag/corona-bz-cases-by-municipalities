@@ -145,7 +145,7 @@ function main() {
             // Newest date in sheet (get it it from cell E3)
             let dt = sheetContent.E3.v.replace("Totali al ", "");
 
-            for (let i = row_start; i < row_end+1; i++) {
+            for (let i = row_start; i < row_end + 1; i++) {
                 let cellMunicipality = "B" + i,
                     cellTotalPositivesToday = "E" + i,
                     cellTotalPositivesYesterday = "D" + i,
@@ -167,7 +167,6 @@ function main() {
                             municipalityUnknownToday: sheetContent[cellMunicipalityUnknownToday].v,
                         });
                     }
-                    console.log(sheetContent[cellMunicipality].v)
                     // Get rows which contain the string "Totale complessivo"
                     if (sheetContent[cellMunicipality].v.includes("Totale complessivo")) {
                         covid_data.push({
@@ -183,8 +182,6 @@ function main() {
                     // Get rows which contain the string "Totale"
                     if (sheetContent[cellMunicipality].v.includes("Totale")) {
                         if (
-                            
-
                             //only add municipalities of South Tyrol
                             listOfMunicipalities.includes(sheetContent[cellMunicipality].v.replace(" Totale", ""))
                         ) {
