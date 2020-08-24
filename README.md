@@ -1,0 +1,1 @@
+This script scrapes the data of positive SARS-CoV-2 test cases per day of each municipality of South Tyrol from a Excel file. The Excel file will be published each day in a [press release blog post](http://www.provinz.bz.it/sicherheit-zivilschutz/zivilschutz/coronavirus-situation-suedtirol.asp). Output is a `JSON` file in the output folder. 
