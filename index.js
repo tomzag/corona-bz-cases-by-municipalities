@@ -4,7 +4,7 @@ const fse = require("fs-extra");
 
 // Scrape data from this URL
 // URL has to be changed manually every day
-const url = "https://www.sabes.it/de/news.asp?aktuelles_action=300&aktuelles_image_id=1077885";
+const url = "https://www.sabes.it/de/news.asp?aktuelles_action=300&aktuelles_image_id=1077976";
 
 const listOfMunicipalities = [
     "ALDINO",
@@ -137,15 +137,16 @@ function main() {
             const workbook = XLSX.read(data, { type: "array" });
             const sheetContent = workbook.Sheets[workbook.SheetNames[0]];
             const range = XLSX.utils.decode_range(sheetContent["!ref"]);
-            const row_start = range.s.r;
-            const row_end = range.e.r;
+            // const row_start = range.s.r;
+            // const row_end = range.e.r;
 
             const covid_data = [];
 
             // Newest date in sheet (get it it from cell E3)
             let dt = sheetContent.E3.v.replace("Totali al ", "");
 
-            for (let i = row_start; i < row_end + 1; i++) {
+            // Loop through 1000 rows
+            for (let i = 0; i < 1000; i++) {
                 let cellMunicipality = "B" + i,
                     cellTotalPositivesToday = "E" + i,
                     cellTotalPositivesYesterday = "D" + i,
@@ -214,7 +215,7 @@ function main() {
                 todaysDate_formatted = formatDate(todaysDate);
 
             // check if data is from today
-            // if (newestDateInSheet_formatted === todaysDate_formatted) {
+            if (newestDateInSheet_formatted === todaysDate_formatted) {
             //save in file
             fse.outputFile(`output/${newestDateInSheet_formatted}.json`, JSON.stringify(covid_data), (err) => {
                 if (err) {
@@ -223,9 +224,9 @@ function main() {
                     console.log("The file was saved!");
                 }
             });
-            // } else {
-            //     console.log("Data is not from today!");
-            // }
+            } else {
+                console.log("Data is not from today!");
+            }
         })
         .catch((error) => {
             console.log(error);
