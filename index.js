@@ -4,7 +4,7 @@ const fse = require("fs-extra");
 
 // Scrape data from this URL
 // URL has to be changed manually every day
-const url = "https://www.sabes.it/de/news.asp?aktuelles_action=300&aktuelles_image_id=1078200";
+const url = "https://www.sabes.it/de/news.asp?aktuelles_action=300&aktuelles_image_id=1078337";
 
 const listOfMunicipalities = [
     "ALDINO",
@@ -216,14 +216,14 @@ function main() {
 
             // check if data is from today
             if (newestDateInSheet_formatted === todaysDate_formatted) {
-            //save in file
-            fse.outputFile(`output/${newestDateInSheet_formatted}.json`, JSON.stringify(covid_data), (err) => {
-                if (err) {
-                    console.log(err);
-                } else {
-                    console.log("The file was saved!");
-                }
-            });
+                //save in file
+                fse.outputFile(`output/${newestDateInSheet_formatted}.json`, JSON.stringify(covid_data), (err) => {
+                    if (err) {
+                        console.log(err);
+                    } else {
+                        console.log("The file was saved!");
+                    }
+                });
             } else {
                 console.log("Data is not from today!");
             }
