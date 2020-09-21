@@ -4,7 +4,7 @@ const fse = require("fs-extra");
 
 // Scrape data from this URL
 // URL has to be changed manually every day
-const url = "https://www.sabes.it/de/news.asp?aktuelles_action=300&aktuelles_image_id=1079582";
+const url = "https://www.sabes.it/de/news.asp?aktuelles_action=300&aktuelles_image_id=1080837";
 
 const listOfMunicipalities = [
     "ALDINO",
@@ -135,7 +135,7 @@ function main() {
             // get Excel Sheet informations
             const data = new Uint8Array(ab);
             const workbook = XLSX.read(data, {
-                type: "array"
+                type: "array",
             });
             const sheetContent = workbook.Sheets[workbook.SheetNames[0]];
             const range = XLSX.utils.decode_range(sheetContent["!ref"]);
@@ -192,11 +192,12 @@ function main() {
                                 municipality: sheetContent[cellMunicipality].v.replace(" Totale", ""),
                                 totalToday: sheetContent[cellTotalPositivesToday].v,
                                 totalYesterday: sheetContent[cellTotalPositivesYesterday].v,
-                                increaseSinceDayBefore: sheetContent[cellTotalPositivesToday].v -
+                                increaseSinceDayBefore:
+                                    sheetContent[cellTotalPositivesToday].v -
                                     sheetContent[cellTotalPositivesYesterday].v,
                                 totalCuredToday: sheetContent[cellTotalCuredToday].v,
                                 totalCuredYesterday: sheetContent[cellTotalCuredYesterday].v,
-                                deceased: sheetContent[cellDeceased].v,
+                                deceased: sheetContent[cellDeceased] !== undefined && sheetContent[cellDeceased].v,
                                 activePositives: sheetContent[cellActivePositives].v,
                             });
                         }
