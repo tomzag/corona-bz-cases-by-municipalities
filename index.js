@@ -148,7 +148,7 @@ function main() {
             let dt = sheetContent.E3.v.replace("Totali al ", "");
 
             // Loop through 1000 rows
-            for (let i = 0; i < 1000; i++) {
+            for (let i = 0; i < 1100; i++) {
                 let cellMunicipality = "B" + i,
                     cellTotalPositivesToday = "E" + i,
                     cellTotalPositivesYesterday = "D" + i,
