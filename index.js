@@ -4,7 +4,7 @@ const fse = require("fs-extra");
 
 // Scrape data from this URL
 // URL has to be changed manually every day
-const url = "https://www.sabes.it/de/news.asp?aktuelles_action=300&aktuelles_image_id=1083260";
+const url = "https://www.sabes.it/de/news.asp?aktuelles_action=300&aktuelles_image_id=1083306";
 
 const listOfMunicipalities = [
     "ALDINO",
