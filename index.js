@@ -4,7 +4,7 @@ const fse = require("fs-extra");
 
 // Scrape data from this URL
 // URL has to be changed manually every day
-const url = "https://www.sabes.it/de/news.asp?aktuelles_action=300&aktuelles_image_id=1083435";
+const url = "https://www.sabes.it/de/news.asp?aktuelles_action=300&aktuelles_image_id=1083604";
 
 const listOfMunicipalities = [
     "ALDINO",
@@ -167,7 +167,10 @@ function main() {
                     // Get rows which contain the string "Comune sconosciuto Totale"
                     if (sheetContent[cellMunicipality].v.includes("Comune sconosciuto Totale")) {
                         covid_data.push({
-                            municipalityUnknownToday: sheetContent[cellMunicipalityUnknownToday].v,
+                            municipalityUnknownToday:
+                                sheetContent[cellDeceased] === undefined
+                                    ? 0
+                                    : sheetContent[cellMunicipalityUnknownToday].v,
                         });
                     }
                     // Get rows which contain the string "Totale complessivo"
