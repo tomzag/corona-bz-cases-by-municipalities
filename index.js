@@ -4,7 +4,7 @@ const fse = require("fs-extra");
 
 // Scrape data from this URL
 // URL has to be changed manually every day
-const url = "https://www.sabes.it/de/news.asp?aktuelles_action=300&aktuelles_image_id=1083604";
+const url = "https://www.sabes.it/de/news.asp?aktuelles_action=300&aktuelles_image_id=1083749";
 
 const listOfMunicipalities = [
     "ALDINO",
@@ -177,11 +177,21 @@ function main() {
                     if (sheetContent[cellMunicipality].v.includes("Totale complessivo")) {
                         covid_data.push({
                             totalSum: {
-                                positivesUntilToday: sheetContent[cellTotalPositivesOfAllMunicipalitiesUntilToday].v,
-                                positivesToday: sheetContent[cellTotalPositivesOfAllMunicipalitiesToday].v,
-                                curedUntilToday: sheetContent[cellTotalCuredUntilToday].v,
-                                deceasedUntilToday: sheetContent[cellTotalDeceasedUntilToday].v,
-                                activePostitivesUntilToday: sheetContent[cellTotalActivePositivesUntilToday].v,
+                                positivesUntilToday:
+                                    sheetContent[cellTotalPositivesOfAllMunicipalitiesUntilToday] !== undefined &&
+                                    sheetContent[cellTotalPositivesOfAllMunicipalitiesUntilToday].v,
+                                positivesToday:
+                                    sheetContent[cellTotalPositivesOfAllMunicipalitiesToday] !== undefined &&
+                                    sheetContent[cellTotalPositivesOfAllMunicipalitiesToday].v,
+                                curedUntilToday:
+                                    sheetContent[cellTotalCuredUntilToday] !== undefined &&
+                                    sheetContent[cellTotalCuredUntilToday].v,
+                                deceasedUntilToday:
+                                    sheetContent[cellTotalDeceasedUntilToday] !== undefined &&
+                                    sheetContent[cellTotalDeceasedUntilToday].v,
+                                activePostitivesUntilToday:
+                                    sheetContent[cellTotalActivePositivesUntilToday] !== undefined &&
+                                    sheetContent[cellTotalActivePositivesUntilToday].v,
                             },
                         });
                     }
@@ -198,10 +208,14 @@ function main() {
                                 increaseSinceDayBefore:
                                     sheetContent[cellTotalPositivesToday].v -
                                     sheetContent[cellTotalPositivesYesterday].v,
-                                totalCuredToday: sheetContent[cellTotalCuredToday].v,
+                                totalCuredToday:
+                                    sheetContent[cellTotalCuredToday] !== undefined &&
+                                    sheetContent[cellTotalCuredToday].v,
                                 totalCuredYesterday: sheetContent[cellTotalCuredYesterday].v,
                                 deceased: sheetContent[cellDeceased] !== undefined && sheetContent[cellDeceased].v,
-                                activePositives: sheetContent[cellActivePositives].v,
+                                activePositives:
+                                    sheetContent[cellActivePositives] !== undefined &&
+                                    sheetContent[cellActivePositives].v,
                             });
                         }
                     }
