@@ -152,23 +152,23 @@ function main() {
                 let cellMunicipality = "B" + i,
                     cellTotalPositivesToday = "E" + i,
                     cellTotalPositivesYesterday = "D" + i,
-                    cellTotalCuredToday = "H" + i,
-                    cellTotalCuredYesterday = "G" + i,
-                    cellDeceased = "J" + i,
-                    cellActivePositives = "K" + i;
+                    // cellTotalCuredToday = "H" + i,
+                    // cellTotalCuredYesterday = "G" + i,
+                    // cellDeceased = "J" + i,
+                    cellActivePositives = "G" + i;
                 cellMunicipalityUnknownToday = "F" + i;
                 cellTotalPositivesOfAllMunicipalitiesToday = "F" + i;
                 cellTotalPositivesOfAllMunicipalitiesUntilToday = "E" + i;
-                cellTotalCuredUntilToday = "H" + i;
-                cellTotalDeceasedUntilToday = "J" + i;
-                cellTotalActivePositivesUntilToday = "K" + i;
+                // cellTotalCuredUntilToday = "H" + i;
+                // cellTotalDeceasedUntilToday = "J" + i;
+                cellTotalActivePositivesUntilToday = "G" + i;
 
                 if (sheetContent[cellMunicipality] !== undefined) {
                     // Get rows which contain the string "Comune sconosciuto Totale"
                     if (sheetContent[cellMunicipality].v.includes("Comune sconosciuto Totale")) {
                         covid_data.push({
                             municipalityUnknownToday:
-                                sheetContent[cellDeceased] === undefined
+                                sheetContent[cellMunicipalityUnknownToday] === undefined
                                     ? 0
                                     : sheetContent[cellMunicipalityUnknownToday].v,
                         });
@@ -183,18 +183,19 @@ function main() {
                                 positivesToday:
                                     sheetContent[cellTotalPositivesOfAllMunicipalitiesToday] !== undefined &&
                                     sheetContent[cellTotalPositivesOfAllMunicipalitiesToday].v,
-                                curedUntilToday:
-                                    sheetContent[cellTotalCuredUntilToday] !== undefined &&
-                                    sheetContent[cellTotalCuredUntilToday].v,
-                                deceasedUntilToday:
-                                    sheetContent[cellTotalDeceasedUntilToday] !== undefined &&
-                                    sheetContent[cellTotalDeceasedUntilToday].v,
+                                // curedUntilToday:
+                                //     // sheetContent[cellTotalCuredUntilToday] !== undefined &&
+                                //     sheetContent[cellTotalCuredUntilToday].v,
+                                // deceasedUntilToday:
+                                //     sheetContent[cellTotalDeceasedUntilToday] !== undefined &&
+                                //     sheetContent[cellTotalDeceasedUntilToday].v,
                                 activePostitivesUntilToday:
                                     sheetContent[cellTotalActivePositivesUntilToday] !== undefined &&
                                     sheetContent[cellTotalActivePositivesUntilToday].v,
                             },
                         });
                     }
+                    // console.log(covid_data.curedUntilToday);
                     // Get rows which contain the string "Totale"
                     if (sheetContent[cellMunicipality].v.includes("Totale")) {
                         if (
@@ -208,11 +209,11 @@ function main() {
                                 increaseSinceDayBefore:
                                     sheetContent[cellTotalPositivesToday].v -
                                     sheetContent[cellTotalPositivesYesterday].v,
-                                totalCuredToday:
-                                    sheetContent[cellTotalCuredToday] !== undefined &&
-                                    sheetContent[cellTotalCuredToday].v,
-                                totalCuredYesterday: sheetContent[cellTotalCuredYesterday].v,
-                                deceased: sheetContent[cellDeceased] !== undefined && sheetContent[cellDeceased].v,
+                                // totalCuredToday:
+                                //     sheetContent[cellTotalCuredToday] !== undefined &&
+                                //     sheetContent[cellTotalCuredToday].v,
+                                // totalCuredYesterday: sheetContent[cellTotalCuredYesterday].v,
+                                // deceased: sheetContent[cellDeceased] !== undefined && sheetContent[cellDeceased].v,
                                 activePositives:
                                     sheetContent[cellActivePositives] !== undefined &&
                                     sheetContent[cellActivePositives].v,
