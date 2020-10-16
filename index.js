@@ -1,10 +1,11 @@
 const fetch = require("node-fetch");
 const XLSX = require("xlsx");
 const fse = require("fs-extra");
+const puppeteer = require("puppeteer");
 
 // Scrape data from this URL
 // URL has to be changed manually every day
-const url = "https://www.sabes.it/de/news.asp?aktuelles_action=300&aktuelles_image_id=1083749";
+const pressPostUrl = "https://www.sabes.it/de/news.asp?aktuelles_action=4&aktuelles_article_id=644460";
 
 const listOfMunicipalities = [
     "ALDINO",
@@ -125,9 +126,56 @@ const listOfMunicipalities = [
     "VIPITENO",
 ];
 
-function main() {
-    fetch(url)
-        .then(function (res) {
+async function main() {
+    let xlsxUrl = "";
+    let hospitalNumbers = {};
+
+    async function scrapePressPost(pressPostUrl) {
+        const browser = await puppeteer.launch();
+        const page = await browser.newPage();
+        await page.goto(pressPostUrl);
+
+        async function getXlsxUrl() {
+            const [el] = await page.$x('//*[@id="content"]/div[2]/div/div[1]/ol/li[2]/a');
+            const href = await el.getProperty("href");
+            const hrefText = await href.jsonValue();
+            return hrefText;
+        }
+
+        async function getInHospitalNumbers() {
+            const paragraphs = await page.$$("p");
+
+            const inHospital = { hospitalNumbers };
+            for (var i = 0; i < paragraphs.length; i++) {
+                let valueHandle = await paragraphs[i].getProperty("innerText");
+                let paragraphText = await valueHandle.jsonValue();
+
+                if (paragraphText.includes("Auf Normalstationen im Krankenhaus")) {
+                    inHospital.hospitalNumbers.normalBed = Number(paragraphText.split(":").pop());
+                }
+
+                if (paragraphText.includes("in Intensivbetreuung")) {
+                    inHospital.hospitalNumbers.intensiveCare = Number(paragraphText.split(":").pop());
+                }
+
+                if (paragraphText.includes("In Gossensaß")) {
+                    inHospital.hospitalNumbers.gossensass = Number(paragraphText.split(":").pop());
+                }
+            }
+            return inHospital;
+        }
+
+        hospitalNumbers = await getInHospitalNumbers();
+
+        xlsxUrl = await getXlsxUrl();
+
+        browser.close();
+    }
+
+    await scrapePressPost(pressPostUrl);
+
+    fetch(xlsxUrl)
+        .then(async function (res) {
             if (!res.ok) throw new Error("fetch failed");
             return res.arrayBuffer();
         })
@@ -150,17 +198,12 @@ function main() {
             // Loop through 1000 rows
             for (let i = 0; i < 1100; i++) {
                 let cellMunicipality = "B" + i,
-                    cellTotalPositivesToday = "E" + i,
-                    cellTotalPositivesYesterday = "D" + i,
-                    // cellTotalCuredToday = "H" + i,
-                    // cellTotalCuredYesterday = "G" + i,
-                    // cellDeceased = "J" + i,
-                    cellActivePositives = "G" + i;
+                        cellTotalPositivesToday = "E" + i,
+                        cellTotalPositivesYesterday = "D" + i,
+                        cellActivePositives = "G" + i;
                 cellMunicipalityUnknownToday = "F" + i;
                 cellTotalPositivesOfAllMunicipalitiesToday = "F" + i;
                 cellTotalPositivesOfAllMunicipalitiesUntilToday = "E" + i;
-                // cellTotalCuredUntilToday = "H" + i;
-                // cellTotalDeceasedUntilToday = "J" + i;
                 cellTotalActivePositivesUntilToday = "G" + i;
 
                 if (sheetContent[cellMunicipality] !== undefined) {
@@ -195,7 +238,7 @@ function main() {
                             },
                         });
                     }
-                    // console.log(covid_data.curedUntilToday);
+
                     // Get rows which contain the string "Totale"
                     if (sheetContent[cellMunicipality].v.includes("Totale")) {
                         if (
@@ -222,6 +265,8 @@ function main() {
                     }
                 }
             }
+
+            covid_data.push(hospitalNumbers);
 
             const parts = dt.split("-");
             const newestDateInSheet = new Date(
