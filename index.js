@@ -195,12 +195,12 @@ async function main() {
             // Newest date in sheet (get it it from cell E3)
             let dt = sheetContent.E3.v.replace("Totali al ", "");
 
-            // Loop through 1000 rows
-            for (let i = 0; i < 1100; i++) {
+            // Loop through 1300 rows
+            for (let i = 0; i < 1300; i++) {
                 let cellMunicipality = "B" + i,
-                        cellTotalPositivesToday = "E" + i,
-                        cellTotalPositivesYesterday = "D" + i,
-                        cellActivePositives = "G" + i;
+                    cellTotalPositivesToday = "E" + i,
+                    cellTotalPositivesYesterday = "D" + i,
+                    cellActivePositives = "G" + i;
                 cellMunicipalityUnknownToday = "F" + i;
                 cellTotalPositivesOfAllMunicipalitiesToday = "F" + i;
                 cellTotalPositivesOfAllMunicipalitiesUntilToday = "E" + i;
