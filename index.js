@@ -5,7 +5,7 @@ const puppeteer = require("puppeteer");
 
 // Scrape data from this URL
 // URL has to be changed manually every day
-const pressPostUrl = "https://www.sabes.it/de/news.asp?aktuelles_action=4&aktuelles_article_id=644525";
+const pressPostUrl = "https://www.sabes.it/de/news.asp?aktuelles_action=4&aktuelles_article_id=644583";
 
 const listOfMunicipalities = [
     "ALDINO",
@@ -193,18 +193,18 @@ async function main() {
             const covid_data = [];
 
             // Newest date in sheet (get it it from cell E3)
-            let dt = sheetContent.E3.v.replace("Totali al ", "");
-
+            let dt = sheetContent.F3.v.replace("Gesamt - Totale", "");
+            
             // Loop through 1300 rows
             for (let i = 0; i < 1300; i++) {
-                let cellMunicipality = "B" + i,
-                    cellTotalPositivesToday = "E" + i,
-                    cellTotalPositivesYesterday = "D" + i,
-                    cellActivePositives = "G" + i;
-                cellMunicipalityUnknownToday = "F" + i;
-                cellTotalPositivesOfAllMunicipalitiesToday = "F" + i;
-                cellTotalPositivesOfAllMunicipalitiesUntilToday = "E" + i;
-                cellTotalActivePositivesUntilToday = "G" + i;
+                let cellMunicipality = "C" + i,
+                    cellTotalPositivesToday = "F" + i,
+                    cellTotalPositivesYesterday = "E" + i,
+                    cellActivePositives = "H" + i;
+                cellMunicipalityUnknownToday = "G" + i;
+                cellTotalPositivesOfAllMunicipalitiesToday = "G" + i;
+                cellTotalPositivesOfAllMunicipalitiesUntilToday = "F" + i;
+                cellTotalActivePositivesUntilToday = "H" + i;
 
                 if (sheetContent[cellMunicipality] !== undefined) {
                     // Get rows which contain the string "Comune sconosciuto Totale"
