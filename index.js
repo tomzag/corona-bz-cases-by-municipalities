@@ -5,7 +5,7 @@ const puppeteer = require("puppeteer");
 
 // Scrape data from this URL
 // URL has to be changed manually every day
-const pressPostUrl = "https://www.sabes.it/de/news.asp?aktuelles_action=4&aktuelles_article_id=644669";
+const pressPostUrl = "https://www.sabes.it/de/news.asp?aktuelles_action=4&aktuelles_article_id=644684";
 
 const listOfMunicipalities = [
     "ALDINO",
@@ -152,6 +152,10 @@ async function main() {
 
                 if (paragraphText.includes("Auf Normalstationen im Krankenhaus")) {
                     inHospital.hospitalNumbers.normalBed = Number(paragraphText.split(":").pop());
+                }
+
+                if (paragraphText.includes("In Privatkliniken")) {
+                    inHospital.hospitalNumbers.normalBedPrivateHospital = Number(paragraphText.split(":").pop());
                 }
 
                 if (paragraphText.includes("in Intensivbetreuung")) {
