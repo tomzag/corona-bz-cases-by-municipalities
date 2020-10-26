@@ -5,7 +5,7 @@ const puppeteer = require("puppeteer");
 
 // Scrape data from this URL
 // URL has to be changed manually every day
-const pressPostUrl = "https://www.sabes.it/de/news.asp?aktuelles_action=4&aktuelles_article_id=644768";
+const pressPostUrl = "https://www.sabes.it/de/news.asp?aktuelles_action=4&aktuelles_article_id=644822";
 
 const listOfMunicipalities = [
     "ALDINO",
@@ -136,7 +136,7 @@ async function main() {
         await page.goto(pressPostUrl);
 
         async function getXlsxUrl() {
-            const [el] = await page.$x('//*[@id="content"]/div[2]/div/div[1]/ol/li[1]/a');
+            const [el] = await page.$x('//*[@id="content"]/div[2]/div/div[1]/ol/li[2]/a');
             const href = await el.getProperty("href");
             const hrefText = await href.jsonValue();
             return hrefText;
@@ -209,6 +209,7 @@ async function main() {
                 cellTotalPositivesOfAllMunicipalitiesToday = "G" + i;
                 cellTotalPositivesOfAllMunicipalitiesUntilToday = "F" + i;
                 cellTotalActivePositivesUntilToday = "H" + i;
+                cellIstatCode = "A" + i;
 
                 if (sheetContent[cellMunicipality] !== undefined) {
                     // Get rows which contain the string "Comune sconosciuto Totale"
@@ -251,6 +252,7 @@ async function main() {
                         ) {
                             covid_data.push({
                                 municipality: sheetContent[cellMunicipality].v.replace(" Totale", ""),
+                                municipalityIstatCode: sheetContent[cellIstatCode].v,
                                 totalToday: sheetContent[cellTotalPositivesToday].v,
                                 totalYesterday: sheetContent[cellTotalPositivesYesterday].v,
                                 increaseSinceDayBefore:
