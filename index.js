@@ -199,8 +199,8 @@ async function main() {
             // Newest date in sheet (get it it from cell E3)
             let dt = sheetContent.F3.v.replace("Gesamt - Totale", "");
             
-            // Loop through 1300 rows
-            for (let i = 0; i < 1300; i++) {
+            // Loop through 2000 rows
+            for (let i = 0; i < 2000; i++) {
                 let cellMunicipality = "C" + i,
                     cellTotalPositivesToday = "F" + i,
                     cellTotalPositivesYesterday = "E" + i,
