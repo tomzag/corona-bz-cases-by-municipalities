@@ -1,1 +1,917 @@
-[{"municipality":"ALDINO","municipalityIstatCode":21001,"totalToday":19,"totalYesterday":19,"increaseSinceDayBefore":0,"activePositives":9},{"municipality":"ANDRIANO","municipalityIstatCode":21002,"totalToday":7,"totalYesterday":7,"increaseSinceDayBefore":0,"activePositives":1},{"municipality":"ANTERIVO","municipalityIstatCode":21003,"totalToday":5,"totalYesterday":4,"increaseSinceDayBefore":1,"activePositives":1},{"municipality":"APPIANO SULLA STRADA DEL VINO","municipalityIstatCode":21004,"totalToday":267,"totalYesterday":262,"increaseSinceDayBefore":5,"activePositives":93},{"municipality":"AVELENGO","municipalityIstatCode":21005,"totalToday":6,"totalYesterday":6,"increaseSinceDayBefore":0,"activePositives":0},{"municipality":"BADIA","municipalityIstatCode":21006,"totalToday":43,"totalYesterday":42,"increaseSinceDayBefore":1,"activePositives":5},{"municipality":"BARBIANO","municipalityIstatCode":21007,"totalToday":10,"totalYesterday":10,"increaseSinceDayBefore":0,"activePositives":4},{"municipality":"BOLZANO","municipalityIstatCode":21008,"totalToday":2060,"totalYesterday":1990,"increaseSinceDayBefore":70,"activePositives":1358},{"municipality":"BRAIES","municipalityIstatCode":21009,"totalToday":21,"totalYesterday":21,"increaseSinceDayBefore":0,"activePositives":9},{"municipality":"BRENNERO","municipalityIstatCode":21010,"totalToday":18,"totalYesterday":17,"increaseSinceDayBefore":1,"activePositives":3},{"municipality":"BRESSANONE","municipalityIstatCode":21011,"totalToday":263,"totalYesterday":251,"increaseSinceDayBefore":12,"activePositives":128},{"municipality":"BRONZOLO","municipalityIstatCode":21012,"totalToday":46,"totalYesterday":44,"increaseSinceDayBefore":2,"activePositives":25},{"municipality":"BRUNICO","municipalityIstatCode":21013,"totalToday":243,"totalYesterday":232,"increaseSinceDayBefore":11,"activePositives":126},{"municipality":"CALDARO SULLA STRADA DEL VINO","municipalityIstatCode":21015,"totalToday":67,"totalYesterday":63,"increaseSinceDayBefore":4,"activePositives":50},{"municipality":"CAMPO DI TRENS","municipalityIstatCode":21016,"totalToday":63,"totalYesterday":60,"increaseSinceDayBefore":3,"activePositives":51},{"municipality":"CAMPO TURES","municipalityIstatCode":21017,"totalToday":52,"totalYesterday":50,"increaseSinceDayBefore":2,"activePositives":40},{"municipality":"CASTELBELLO-CIARDES","municipalityIstatCode":21018,"totalToday":6,"totalYesterday":6,"increaseSinceDayBefore":0,"activePositives":3},{"municipality":"CASTELROTTO","municipalityIstatCode":21019,"totalToday":92,"totalYesterday":92,"increaseSinceDayBefore":0,"activePositives":8},{"municipality":"CERMES","municipalityIstatCode":21020,"totalToday":15,"totalYesterday":14,"increaseSinceDayBefore":1,"activePositives":3},{"municipality":"CHIENES","municipalityIstatCode":21021,"totalToday":36,"totalYesterday":32,"increaseSinceDayBefore":4,"activePositives":21},{"municipality":"CHIUSA","municipalityIstatCode":21022,"totalToday":53,"totalYesterday":50,"increaseSinceDayBefore":3,"activePositives":36},{"municipality":"CORNEDO ALL'ISARCO","municipalityIstatCode":21023,"totalToday":66,"totalYesterday":65,"increaseSinceDayBefore":1,"activePositives":42},{"municipality":"CORTACCIA SULLA STRADA DEL VINO","municipalityIstatCode":21024,"totalToday":9,"totalYesterday":9,"increaseSinceDayBefore":0,"activePositives":2},{"municipality":"CORTINA SULLA STRADA DEL VINO","municipalityIstatCode":21025,"totalToday":12,"totalYesterday":12,"increaseSinceDayBefore":0,"activePositives":2},{"municipality":"CORVARA IN BADIA","municipalityIstatCode":21026,"totalToday":28,"totalYesterday":27,"increaseSinceDayBefore":1,"activePositives":7},{"municipality":"CURON VENOSTA","municipalityIstatCode":21027,"totalToday":4,"totalYesterday":4,"increaseSinceDayBefore":0,"activePositives":2},{"municipality":"DOBBIACO","municipalityIstatCode":21028,"totalToday":26,"totalYesterday":25,"increaseSinceDayBefore":1,"activePositives":13},{"municipality":"EGNA","municipalityIstatCode":21029,"totalToday":87,"totalYesterday":81,"increaseSinceDayBefore":6,"activePositives":54},{"municipality":"FALZES","municipalityIstatCode":21030,"totalToday":36,"totalYesterday":34,"increaseSinceDayBefore":2,"activePositives":22},{"municipality":"FIE' ALLO SCILIAR","municipalityIstatCode":21031,"totalToday":25,"totalYesterday":25,"increaseSinceDayBefore":0,"activePositives":5},{"municipality":"FORTEZZA","municipalityIstatCode":21032,"totalToday":18,"totalYesterday":18,"increaseSinceDayBefore":0,"activePositives":6},{"municipality":"FUNES","municipalityIstatCode":21033,"totalToday":31,"totalYesterday":30,"increaseSinceDayBefore":1,"activePositives":10},{"municipality":"GAIS","municipalityIstatCode":21034,"totalToday":36,"totalYesterday":31,"increaseSinceDayBefore":5,"activePositives":26},{"municipality":"GARGAZZONE","municipalityIstatCode":21035,"totalToday":19,"totalYesterday":13,"increaseSinceDayBefore":6,"activePositives":15},{"municipality":"GLORENZA","municipalityIstatCode":21036,"totalToday":2,"totalYesterday":2,"increaseSinceDayBefore":0,"activePositives":2},{"municipality":"LA VALLE","municipalityIstatCode":21117,"totalToday":24,"totalYesterday":20,"increaseSinceDayBefore":4,"activePositives":7},{"municipality":"LACES","municipalityIstatCode":21037,"totalToday":19,"totalYesterday":19,"increaseSinceDayBefore":0,"activePositives":14},{"municipality":"LAGUNDO","municipalityIstatCode":21038,"totalToday":24,"totalYesterday":22,"increaseSinceDayBefore":2,"activePositives":10},{"municipality":"LAION","municipalityIstatCode":21039,"totalToday":26,"totalYesterday":25,"increaseSinceDayBefore":1,"activePositives":6},{"municipality":"LAIVES","municipalityIstatCode":21040,"totalToday":487,"totalYesterday":463,"increaseSinceDayBefore":24,"activePositives":337},{"municipality":"LANA","municipalityIstatCode":21041,"totalToday":94,"totalYesterday":89,"increaseSinceDayBefore":5,"activePositives":45},{"municipality":"LASA","municipalityIstatCode":21042,"totalToday":28,"totalYesterday":28,"increaseSinceDayBefore":0,"activePositives":22},{"municipality":"LAUREGNO","municipalityIstatCode":21043,"totalToday":1,"totalYesterday":1,"increaseSinceDayBefore":0,"activePositives":0},{"municipality":"LUSON","municipalityIstatCode":21044,"totalToday":13,"totalYesterday":13,"increaseSinceDayBefore":0,"activePositives":11},{"municipality":"MAGRE' SULLA STRADA DEL VINO","municipalityIstatCode":21045,"totalToday":7,"totalYesterday":7,"increaseSinceDayBefore":0,"activePositives":4},{"municipality":"MALLES VENOSTA","municipalityIstatCode":21046,"totalToday":37,"totalYesterday":32,"increaseSinceDayBefore":5,"activePositives":33},{"municipality":"MAREBBE","municipalityIstatCode":21047,"totalToday":23,"totalYesterday":23,"increaseSinceDayBefore":0,"activePositives":7},{"municipality":"MARLENGO","municipalityIstatCode":21048,"totalToday":9,"totalYesterday":8,"increaseSinceDayBefore":1,"activePositives":3},{"municipality":"MARTELLO","municipalityIstatCode":21049,"totalToday":8,"totalYesterday":8,"increaseSinceDayBefore":0,"activePositives":4},{"municipality":"MELTINA","municipalityIstatCode":21050,"totalToday":21,"totalYesterday":20,"increaseSinceDayBefore":1,"activePositives":16},{"municipality":"MERANO","municipalityIstatCode":21051,"totalToday":456,"totalYesterday":432,"increaseSinceDayBefore":24,"activePositives":259},{"municipality":"MONGUELFO - TESIDO","municipalityIstatCode":21052,"totalToday":97,"totalYesterday":97,"increaseSinceDayBefore":0,"activePositives":83},{"municipality":"MONTAGNA","municipalityIstatCode":21053,"totalToday":30,"totalYesterday":27,"increaseSinceDayBefore":3,"activePositives":10},{"municipality":"MOSO IN PASSIRIA","municipalityIstatCode":21054,"totalToday":18,"totalYesterday":18,"increaseSinceDayBefore":0,"activePositives":3},{"municipality":"NALLES","municipalityIstatCode":21055,"totalToday":24,"totalYesterday":24,"increaseSinceDayBefore":0,"activePositives":15},{"municipality":"NATURNO","municipalityIstatCode":21056,"totalToday":19,"totalYesterday":19,"increaseSinceDayBefore":0,"activePositives":12},{"municipality":"NAZ-SCIAVES","municipalityIstatCode":21057,"totalToday":22,"totalYesterday":22,"increaseSinceDayBefore":0,"activePositives":7},{"municipality":"NOVA LEVANTE","municipalityIstatCode":21058,"totalToday":22,"totalYesterday":21,"increaseSinceDayBefore":1,"activePositives":19},{"municipality":"NOVA PONENTE","municipalityIstatCode":21059,"totalToday":14,"totalYesterday":14,"increaseSinceDayBefore":0,"activePositives":5},{"municipality":"ORA","municipalityIstatCode":21060,"totalToday":61,"totalYesterday":57,"increaseSinceDayBefore":4,"activePositives":20},{"municipality":"ORTISEI","municipalityIstatCode":21061,"totalToday":59,"totalYesterday":58,"increaseSinceDayBefore":1,"activePositives":3},{"municipality":"PARCINES","municipalityIstatCode":21062,"totalToday":12,"totalYesterday":12,"increaseSinceDayBefore":0,"activePositives":8},{"municipality":"PERCA","municipalityIstatCode":21063,"totalToday":14,"totalYesterday":12,"increaseSinceDayBefore":2,"activePositives":9},{"municipality":"PLAUS","municipalityIstatCode":21064,"totalToday":5,"totalYesterday":5,"increaseSinceDayBefore":0,"activePositives":4},{"municipality":"PONTE GARDENA","municipalityIstatCode":21065,"totalToday":1,"totalYesterday":0,"increaseSinceDayBefore":1,"activePositives":false},{"municipality":"POSTAL","municipalityIstatCode":21066,"totalToday":21,"totalYesterday":19,"increaseSinceDayBefore":2,"activePositives":10},{"municipality":"PRATO ALLO STELVIO","municipalityIstatCode":21067,"totalToday":26,"totalYesterday":24,"increaseSinceDayBefore":2,"activePositives":17},{"municipality":"PREDOI","municipalityIstatCode":21068,"totalToday":7,"totalYesterday":6,"increaseSinceDayBefore":1,"activePositives":2},{"municipality":"RACINES","municipalityIstatCode":21070,"totalToday":110,"totalYesterday":105,"increaseSinceDayBefore":5,"activePositives":83},{"municipality":"RASUN ANTERSELVA","municipalityIstatCode":21071,"totalToday":41,"totalYesterday":36,"increaseSinceDayBefore":5,"activePositives":38},{"municipality":"RENON","municipalityIstatCode":21072,"totalToday":46,"totalYesterday":46,"increaseSinceDayBefore":0,"activePositives":19},{"municipality":"RIFIANO","municipalityIstatCode":21073,"totalToday":10,"totalYesterday":7,"increaseSinceDayBefore":3,"activePositives":4},{"municipality":"RIO DI PUSTERIA","municipalityIstatCode":21074,"totalToday":16,"totalYesterday":15,"increaseSinceDayBefore":1,"activePositives":9},{"municipality":"RODENGO","municipalityIstatCode":21075,"totalToday":7,"totalYesterday":7,"increaseSinceDayBefore":0,"activePositives":1},{"municipality":"SALORNO SULLA STRADA DEL VINO","municipalityIstatCode":21076,"totalToday":53,"totalYesterday":52,"increaseSinceDayBefore":1,"activePositives":26},{"municipality":"SAN CANDIDO","municipalityIstatCode":21077,"totalToday":52,"totalYesterday":48,"increaseSinceDayBefore":4,"activePositives":28},{"municipality":"SAN GENESIO ATESINO","municipalityIstatCode":21079,"totalToday":32,"totalYesterday":32,"increaseSinceDayBefore":0,"activePositives":12},{"municipality":"SAN LEONARDO IN PASSIRIA","municipalityIstatCode":21080,"totalToday":48,"totalYesterday":46,"increaseSinceDayBefore":2,"activePositives":9},{"municipality":"SAN LORENZO DI SEBATO","municipalityIstatCode":21081,"totalToday":47,"totalYesterday":41,"increaseSinceDayBefore":6,"activePositives":28},{"municipality":"SAN MARTINO IN BADIA","municipalityIstatCode":21082,"totalToday":12,"totalYesterday":10,"increaseSinceDayBefore":2,"activePositives":4},{"municipality":"SAN MARTINO IN PASSIRIA","municipalityIstatCode":21083,"totalToday":19,"totalYesterday":17,"increaseSinceDayBefore":2,"activePositives":9},{"municipality":"SAN PANCRAZIO","municipalityIstatCode":21084,"totalToday":7,"totalYesterday":7,"increaseSinceDayBefore":0,"activePositives":4},{"municipality":"SANTA CRISTINA VALGARDENA","municipalityIstatCode":21085,"totalToday":30,"totalYesterday":30,"increaseSinceDayBefore":0,"activePositives":3},{"municipality":"SARENTINO","municipalityIstatCode":21086,"totalToday":68,"totalYesterday":61,"increaseSinceDayBefore":7,"activePositives":61},{"municipality":"SCENA","municipalityIstatCode":21087,"totalToday":11,"totalYesterday":9,"increaseSinceDayBefore":2,"activePositives":8},{"municipality":"SELVA DEI MOLINI","municipalityIstatCode":21088,"totalToday":8,"totalYesterday":8,"increaseSinceDayBefore":0,"activePositives":4},{"municipality":"SELVA DI VAL GARDENA","municipalityIstatCode":21089,"totalToday":52,"totalYesterday":51,"increaseSinceDayBefore":1,"activePositives":1},{"municipality":"SENALES","municipalityIstatCode":21091,"totalToday":3,"totalYesterday":3,"increaseSinceDayBefore":0,"activePositives":3},{"municipality":"SENALE-SAN FELICE","municipalityIstatCode":21118,"totalToday":5,"totalYesterday":5,"increaseSinceDayBefore":0,"activePositives":0},{"municipality":"SESTO","municipalityIstatCode":21092,"totalToday":158,"totalYesterday":157,"increaseSinceDayBefore":1,"activePositives":134},{"municipality":"SILANDRO","municipalityIstatCode":21093,"totalToday":23,"totalYesterday":21,"increaseSinceDayBefore":2,"activePositives":16},{"municipality":"SLUDERNO","municipalityIstatCode":21094,"totalToday":7,"totalYesterday":7,"increaseSinceDayBefore":0,"activePositives":6},{"municipality":"STELVIO","municipalityIstatCode":21095,"totalToday":5,"totalYesterday":5,"increaseSinceDayBefore":0,"activePositives":1},{"municipality":"TERENTO","municipalityIstatCode":21096,"totalToday":4,"totalYesterday":4,"increaseSinceDayBefore":0,"activePositives":2},{"municipality":"TERLANO","municipalityIstatCode":21097,"totalToday":106,"totalYesterday":104,"increaseSinceDayBefore":2,"activePositives":54},{"municipality":"TERMENO SULLA STRADA DEL VINO","municipalityIstatCode":21098,"totalToday":26,"totalYesterday":25,"increaseSinceDayBefore":1,"activePositives":18},{"municipality":"TESIMO","municipalityIstatCode":21099,"totalToday":34,"totalYesterday":31,"increaseSinceDayBefore":3,"activePositives":12},{"municipality":"TIRES","municipalityIstatCode":21100,"totalToday":6,"totalYesterday":6,"increaseSinceDayBefore":0,"activePositives":2},{"municipality":"TIROLO","municipalityIstatCode":21101,"totalToday":12,"totalYesterday":11,"increaseSinceDayBefore":1,"activePositives":7},{"municipality":"TRODENA NEL PARCO NATURALE","municipalityIstatCode":21102,"totalToday":9,"totalYesterday":8,"increaseSinceDayBefore":1,"activePositives":2},{"municipality":"TUBRE","municipalityIstatCode":21103,"totalToday":7,"totalYesterday":7,"increaseSinceDayBefore":0,"activePositives":7},{"municipality":"ULTIMO","municipalityIstatCode":21104,"totalToday":4,"totalYesterday":3,"increaseSinceDayBefore":1,"activePositives":2},{"municipality":"VADENA","municipalityIstatCode":21105,"totalToday":18,"totalYesterday":17,"increaseSinceDayBefore":1,"activePositives":10},{"municipality":"VAL DI VIZZE","municipalityIstatCode":21107,"totalToday":64,"totalYesterday":59,"increaseSinceDayBefore":5,"activePositives":39},{"municipality":"VALDAORA","municipalityIstatCode":21106,"totalToday":33,"totalYesterday":27,"increaseSinceDayBefore":6,"activePositives":23},{"municipality":"VALLE AURINA","municipalityIstatCode":21108,"totalToday":50,"totalYesterday":48,"increaseSinceDayBefore":2,"activePositives":35},{"municipality":"VALLE DI CASIES","municipalityIstatCode":21109,"totalToday":20,"totalYesterday":19,"increaseSinceDayBefore":1,"activePositives":6},{"municipality":"VANDOIES","municipalityIstatCode":21110,"totalToday":25,"totalYesterday":25,"increaseSinceDayBefore":0,"activePositives":9},{"municipality":"VARNA","municipalityIstatCode":21111,"totalToday":40,"totalYesterday":39,"increaseSinceDayBefore":1,"activePositives":18},{"municipality":"VELTURNO","municipalityIstatCode":21116,"totalToday":33,"totalYesterday":31,"increaseSinceDayBefore":2,"activePositives":22},{"municipality":"VERANO","municipalityIstatCode":21112,"totalToday":1,"totalYesterday":1,"increaseSinceDayBefore":0,"activePositives":0},{"municipality":"VILLABASSA","municipalityIstatCode":21113,"totalToday":50,"totalYesterday":50,"increaseSinceDayBefore":0,"activePositives":18},{"municipality":"VILLANDRO","municipalityIstatCode":21114,"totalToday":21,"totalYesterday":21,"increaseSinceDayBefore":0,"activePositives":18},{"municipality":"VIPITENO","municipalityIstatCode":21115,"totalToday":84,"totalYesterday":80,"increaseSinceDayBefore":4,"activePositives":49},{"municipalityUnknownToday":36},{"totalSum":{"positivesUntilToday":7835,"positivesToday":350,"activePostitivesUntilToday":4561}},{"hospitalNumbers":{"normalBed":163,"normalBedPrivateHospital":70,"gossensass":42,"intensiveCare":18}}]
+[
+    {
+        "municipality": "ALDINO",
+        "municipalityIstatCode": 21001,
+        "totalToday": 19,
+        "totalYesterday": 19,
+        "increaseSinceDayBefore": 0,
+        "activePositives": 9
+    },
+    {
+        "municipality": "ANDRIANO",
+        "municipalityIstatCode": 21002,
+        "totalToday": 7,
+        "totalYesterday": 7,
+        "increaseSinceDayBefore": 0,
+        "activePositives": 1
+    },
+    {
+        "municipality": "ANTERIVO",
+        "municipalityIstatCode": 21003,
+        "totalToday": 5,
+        "totalYesterday": 4,
+        "increaseSinceDayBefore": 1,
+        "activePositives": 1
+    },
+    {
+        "municipality": "APPIANO SULLA STRADA DEL VINO",
+        "municipalityIstatCode": 21004,
+        "totalToday": 267,
+        "totalYesterday": 262,
+        "increaseSinceDayBefore": 5,
+        "activePositives": 93
+    },
+    {
+        "municipality": "AVELENGO",
+        "municipalityIstatCode": 21005,
+        "totalToday": 6,
+        "totalYesterday": 6,
+        "increaseSinceDayBefore": 0,
+        "activePositives": 0
+    },
+    {
+        "municipality": "BADIA",
+        "municipalityIstatCode": 21006,
+        "totalToday": 43,
+        "totalYesterday": 42,
+        "increaseSinceDayBefore": 1,
+        "activePositives": 5
+    },
+    {
+        "municipality": "BARBIANO",
+        "municipalityIstatCode": 21007,
+        "totalToday": 10,
+        "totalYesterday": 10,
+        "increaseSinceDayBefore": 0,
+        "activePositives": 4
+    },
+    {
+        "municipality": "BOLZANO",
+        "municipalityIstatCode": 21008,
+        "totalToday": 2060,
+        "totalYesterday": 1990,
+        "increaseSinceDayBefore": 70,
+        "activePositives": 1358
+    },
+    {
+        "municipality": "BRAIES",
+        "municipalityIstatCode": 21009,
+        "totalToday": 21,
+        "totalYesterday": 21,
+        "increaseSinceDayBefore": 0,
+        "activePositives": 9
+    },
+    {
+        "municipality": "BRENNERO",
+        "municipalityIstatCode": 21010,
+        "totalToday": 18,
+        "totalYesterday": 17,
+        "increaseSinceDayBefore": 1,
+        "activePositives": 3
+    },
+    {
+        "municipality": "BRESSANONE",
+        "municipalityIstatCode": 21011,
+        "totalToday": 263,
+        "totalYesterday": 251,
+        "increaseSinceDayBefore": 12,
+        "activePositives": 128
+    },
+    {
+        "municipality": "BRONZOLO",
+        "municipalityIstatCode": 21012,
+        "totalToday": 46,
+        "totalYesterday": 44,
+        "increaseSinceDayBefore": 2,
+        "activePositives": 25
+    },
+    {
+        "municipality": "BRUNICO",
+        "municipalityIstatCode": 21013,
+        "totalToday": 243,
+        "totalYesterday": 232,
+        "increaseSinceDayBefore": 11,
+        "activePositives": 126
+    },
+    {
+        "municipality": "CALDARO SULLA STRADA DEL VINO",
+        "municipalityIstatCode": 21015,
+        "totalToday": 67,
+        "totalYesterday": 63,
+        "increaseSinceDayBefore": 4,
+        "activePositives": 50
+    },
+    {
+        "municipality": "CAMPO DI TRENS",
+        "municipalityIstatCode": 21016,
+        "totalToday": 63,
+        "totalYesterday": 60,
+        "increaseSinceDayBefore": 3,
+        "activePositives": 51
+    },
+    {
+        "municipality": "CAMPO TURES",
+        "municipalityIstatCode": 21017,
+        "totalToday": 52,
+        "totalYesterday": 50,
+        "increaseSinceDayBefore": 2,
+        "activePositives": 40
+    },
+    {
+        "municipality": "CASTELBELLO-CIARDES",
+        "municipalityIstatCode": 21018,
+        "totalToday": 6,
+        "totalYesterday": 6,
+        "increaseSinceDayBefore": 0,
+        "activePositives": 3
+    },
+    {
+        "municipality": "CASTELROTTO",
+        "municipalityIstatCode": 21019,
+        "totalToday": 92,
+        "totalYesterday": 92,
+        "increaseSinceDayBefore": 0,
+        "activePositives": 8
+    },
+    {
+        "municipality": "CERMES",
+        "municipalityIstatCode": 21020,
+        "totalToday": 15,
+        "totalYesterday": 14,
+        "increaseSinceDayBefore": 1,
+        "activePositives": 3
+    },
+    {
+        "municipality": "CHIENES",
+        "municipalityIstatCode": 21021,
+        "totalToday": 36,
+        "totalYesterday": 32,
+        "increaseSinceDayBefore": 4,
+        "activePositives": 21
+    },
+    {
+        "municipality": "CHIUSA",
+        "municipalityIstatCode": 21022,
+        "totalToday": 53,
+        "totalYesterday": 50,
+        "increaseSinceDayBefore": 3,
+        "activePositives": 36
+    },
+    {
+        "municipality": "CORNEDO ALL'ISARCO",
+        "municipalityIstatCode": 21023,
+        "totalToday": 66,
+        "totalYesterday": 65,
+        "increaseSinceDayBefore": 1,
+        "activePositives": 42
+    },
+    {
+        "municipality": "CORTACCIA SULLA STRADA DEL VINO",
+        "municipalityIstatCode": 21024,
+        "totalToday": 9,
+        "totalYesterday": 9,
+        "increaseSinceDayBefore": 0,
+        "activePositives": 2
+    },
+    {
+        "municipality": "CORTINA SULLA STRADA DEL VINO",
+        "municipalityIstatCode": 21025,
+        "totalToday": 12,
+        "totalYesterday": 12,
+        "increaseSinceDayBefore": 0,
+        "activePositives": 2
+    },
+    {
+        "municipality": "CORVARA IN BADIA",
+        "municipalityIstatCode": 21026,
+        "totalToday": 28,
+        "totalYesterday": 27,
+        "increaseSinceDayBefore": 1,
+        "activePositives": 7
+    },
+    {
+        "municipality": "CURON VENOSTA",
+        "municipalityIstatCode": 21027,
+        "totalToday": 4,
+        "totalYesterday": 4,
+        "increaseSinceDayBefore": 0,
+        "activePositives": 2
+    },
+    {
+        "municipality": "DOBBIACO",
+        "municipalityIstatCode": 21028,
+        "totalToday": 26,
+        "totalYesterday": 25,
+        "increaseSinceDayBefore": 1,
+        "activePositives": 13
+    },
+    {
+        "municipality": "EGNA",
+        "municipalityIstatCode": 21029,
+        "totalToday": 87,
+        "totalYesterday": 81,
+        "increaseSinceDayBefore": 6,
+        "activePositives": 54
+    },
+    {
+        "municipality": "FALZES",
+        "municipalityIstatCode": 21030,
+        "totalToday": 36,
+        "totalYesterday": 34,
+        "increaseSinceDayBefore": 2,
+        "activePositives": 22
+    },
+    {
+        "municipality": "FIE' ALLO SCILIAR",
+        "municipalityIstatCode": 21031,
+        "totalToday": 25,
+        "totalYesterday": 25,
+        "increaseSinceDayBefore": 0,
+        "activePositives": 5
+    },
+    {
+        "municipality": "FORTEZZA",
+        "municipalityIstatCode": 21032,
+        "totalToday": 18,
+        "totalYesterday": 18,
+        "increaseSinceDayBefore": 0,
+        "activePositives": 6
+    },
+    {
+        "municipality": "FUNES",
+        "municipalityIstatCode": 21033,
+        "totalToday": 31,
+        "totalYesterday": 30,
+        "increaseSinceDayBefore": 1,
+        "activePositives": 10
+    },
+    {
+        "municipality": "GAIS",
+        "municipalityIstatCode": 21034,
+        "totalToday": 36,
+        "totalYesterday": 31,
+        "increaseSinceDayBefore": 5,
+        "activePositives": 26
+    },
+    {
+        "municipality": "GARGAZZONE",
+        "municipalityIstatCode": 21035,
+        "totalToday": 19,
+        "totalYesterday": 13,
+        "increaseSinceDayBefore": 6,
+        "activePositives": 15
+    },
+    {
+        "municipality": "GLORENZA",
+        "municipalityIstatCode": 21036,
+        "totalToday": 2,
+        "totalYesterday": 2,
+        "increaseSinceDayBefore": 0,
+        "activePositives": 2
+    },
+    {
+        "municipality": "LA VALLE",
+        "municipalityIstatCode": 21117,
+        "totalToday": 24,
+        "totalYesterday": 20,
+        "increaseSinceDayBefore": 4,
+        "activePositives": 7
+    },
+    {
+        "municipality": "LACES",
+        "municipalityIstatCode": 21037,
+        "totalToday": 19,
+        "totalYesterday": 19,
+        "increaseSinceDayBefore": 0,
+        "activePositives": 14
+    },
+    {
+        "municipality": "LAGUNDO",
+        "municipalityIstatCode": 21038,
+        "totalToday": 24,
+        "totalYesterday": 22,
+        "increaseSinceDayBefore": 2,
+        "activePositives": 10
+    },
+    {
+        "municipality": "LAION",
+        "municipalityIstatCode": 21039,
+        "totalToday": 26,
+        "totalYesterday": 25,
+        "increaseSinceDayBefore": 1,
+        "activePositives": 6
+    },
+    {
+        "municipality": "LAIVES",
+        "municipalityIstatCode": 21040,
+        "totalToday": 487,
+        "totalYesterday": 463,
+        "increaseSinceDayBefore": 24,
+        "activePositives": 337
+    },
+    {
+        "municipality": "LANA",
+        "municipalityIstatCode": 21041,
+        "totalToday": 94,
+        "totalYesterday": 89,
+        "increaseSinceDayBefore": 5,
+        "activePositives": 45
+    },
+    {
+        "municipality": "LASA",
+        "municipalityIstatCode": 21042,
+        "totalToday": 28,
+        "totalYesterday": 28,
+        "increaseSinceDayBefore": 0,
+        "activePositives": 22
+    },
+    {
+        "municipality": "LAUREGNO",
+        "municipalityIstatCode": 21043,
+        "totalToday": 1,
+        "totalYesterday": 1,
+        "increaseSinceDayBefore": 0,
+        "activePositives": 0
+    },
+    {
+        "municipality": "LUSON",
+        "municipalityIstatCode": 21044,
+        "totalToday": 13,
+        "totalYesterday": 13,
+        "increaseSinceDayBefore": 0,
+        "activePositives": 11
+    },
+    {
+        "municipality": "MAGRE' SULLA STRADA DEL VINO",
+        "municipalityIstatCode": 21045,
+        "totalToday": 7,
+        "totalYesterday": 7,
+        "increaseSinceDayBefore": 0,
+        "activePositives": 4
+    },
+    {
+        "municipality": "MALLES VENOSTA",
+        "municipalityIstatCode": 21046,
+        "totalToday": 37,
+        "totalYesterday": 32,
+        "increaseSinceDayBefore": 5,
+        "activePositives": 33
+    },
+    {
+        "municipality": "MAREBBE",
+        "municipalityIstatCode": 21047,
+        "totalToday": 23,
+        "totalYesterday": 23,
+        "increaseSinceDayBefore": 0,
+        "activePositives": 7
+    },
+    {
+        "municipality": "MARLENGO",
+        "municipalityIstatCode": 21048,
+        "totalToday": 9,
+        "totalYesterday": 8,
+        "increaseSinceDayBefore": 1,
+        "activePositives": 3
+    },
+    {
+        "municipality": "MARTELLO",
+        "municipalityIstatCode": 21049,
+        "totalToday": 8,
+        "totalYesterday": 8,
+        "increaseSinceDayBefore": 0,
+        "activePositives": 4
+    },
+    {
+        "municipality": "MELTINA",
+        "municipalityIstatCode": 21050,
+        "totalToday": 21,
+        "totalYesterday": 20,
+        "increaseSinceDayBefore": 1,
+        "activePositives": 16
+    },
+    {
+        "municipality": "MERANO",
+        "municipalityIstatCode": 21051,
+        "totalToday": 456,
+        "totalYesterday": 432,
+        "increaseSinceDayBefore": 24,
+        "activePositives": 259
+    },
+    {
+        "municipality": "MONGUELFO - TESIDO",
+        "municipalityIstatCode": 21052,
+        "totalToday": 97,
+        "totalYesterday": 97,
+        "increaseSinceDayBefore": 0,
+        "activePositives": 83
+    },
+    {
+        "municipality": "MONTAGNA",
+        "municipalityIstatCode": 21053,
+        "totalToday": 30,
+        "totalYesterday": 27,
+        "increaseSinceDayBefore": 3,
+        "activePositives": 10
+    },
+    {
+        "municipality": "MOSO IN PASSIRIA",
+        "municipalityIstatCode": 21054,
+        "totalToday": 18,
+        "totalYesterday": 18,
+        "increaseSinceDayBefore": 0,
+        "activePositives": 3
+    },
+    {
+        "municipality": "NALLES",
+        "municipalityIstatCode": 21055,
+        "totalToday": 24,
+        "totalYesterday": 24,
+        "increaseSinceDayBefore": 0,
+        "activePositives": 15
+    },
+    {
+        "municipality": "NATURNO",
+        "municipalityIstatCode": 21056,
+        "totalToday": 19,
+        "totalYesterday": 19,
+        "increaseSinceDayBefore": 0,
+        "activePositives": 12
+    },
+    {
+        "municipality": "NAZ-SCIAVES",
+        "municipalityIstatCode": 21057,
+        "totalToday": 22,
+        "totalYesterday": 22,
+        "increaseSinceDayBefore": 0,
+        "activePositives": 7
+    },
+    {
+        "municipality": "NOVA LEVANTE",
+        "municipalityIstatCode": 21058,
+        "totalToday": 22,
+        "totalYesterday": 21,
+        "increaseSinceDayBefore": 1,
+        "activePositives": 19
+    },
+    {
+        "municipality": "NOVA PONENTE",
+        "municipalityIstatCode": 21059,
+        "totalToday": 14,
+        "totalYesterday": 14,
+        "increaseSinceDayBefore": 0,
+        "activePositives": 5
+    },
+    {
+        "municipality": "ORA",
+        "municipalityIstatCode": 21060,
+        "totalToday": 61,
+        "totalYesterday": 57,
+        "increaseSinceDayBefore": 4,
+        "activePositives": 20
+    },
+    {
+        "municipality": "ORTISEI",
+        "municipalityIstatCode": 21061,
+        "totalToday": 59,
+        "totalYesterday": 58,
+        "increaseSinceDayBefore": 1,
+        "activePositives": 3
+    },
+    {
+        "municipality": "PARCINES",
+        "municipalityIstatCode": 21062,
+        "totalToday": 12,
+        "totalYesterday": 12,
+        "increaseSinceDayBefore": 0,
+        "activePositives": 8
+    },
+    {
+        "municipality": "PERCA",
+        "municipalityIstatCode": 21063,
+        "totalToday": 14,
+        "totalYesterday": 12,
+        "increaseSinceDayBefore": 2,
+        "activePositives": 9
+    },
+    {
+        "municipality": "PLAUS",
+        "municipalityIstatCode": 21064,
+        "totalToday": 5,
+        "totalYesterday": 5,
+        "increaseSinceDayBefore": 0,
+        "activePositives": 4
+    },
+    {
+        "municipality": "PONTE GARDENA",
+        "municipalityIstatCode": 21065,
+        "totalToday": 1,
+        "totalYesterday": 0,
+        "increaseSinceDayBefore": 1,
+        "activePositives": 1
+    },
+    {
+        "municipality": "POSTAL",
+        "municipalityIstatCode": 21066,
+        "totalToday": 21,
+        "totalYesterday": 19,
+        "increaseSinceDayBefore": 2,
+        "activePositives": 10
+    },
+    {
+        "municipality": "PRATO ALLO STELVIO",
+        "municipalityIstatCode": 21067,
+        "totalToday": 26,
+        "totalYesterday": 24,
+        "increaseSinceDayBefore": 2,
+        "activePositives": 17
+    },
+    {
+        "municipality": "PREDOI",
+        "municipalityIstatCode": 21068,
+        "totalToday": 7,
+        "totalYesterday": 6,
+        "increaseSinceDayBefore": 1,
+        "activePositives": 2
+    },
+    {
+        "municipality": "RACINES",
+        "municipalityIstatCode": 21070,
+        "totalToday": 110,
+        "totalYesterday": 105,
+        "increaseSinceDayBefore": 5,
+        "activePositives": 83
+    },
+    {
+        "municipality": "RASUN ANTERSELVA",
+        "municipalityIstatCode": 21071,
+        "totalToday": 41,
+        "totalYesterday": 36,
+        "increaseSinceDayBefore": 5,
+        "activePositives": 38
+    },
+    {
+        "municipality": "RENON",
+        "municipalityIstatCode": 21072,
+        "totalToday": 46,
+        "totalYesterday": 46,
+        "increaseSinceDayBefore": 0,
+        "activePositives": 19
+    },
+    {
+        "municipality": "RIFIANO",
+        "municipalityIstatCode": 21073,
+        "totalToday": 10,
+        "totalYesterday": 7,
+        "increaseSinceDayBefore": 3,
+        "activePositives": 4
+    },
+    {
+        "municipality": "RIO DI PUSTERIA",
+        "municipalityIstatCode": 21074,
+        "totalToday": 16,
+        "totalYesterday": 15,
+        "increaseSinceDayBefore": 1,
+        "activePositives": 9
+    },
+    {
+        "municipality": "RODENGO",
+        "municipalityIstatCode": 21075,
+        "totalToday": 7,
+        "totalYesterday": 7,
+        "increaseSinceDayBefore": 0,
+        "activePositives": 1
+    },
+    {
+        "municipality": "SALORNO SULLA STRADA DEL VINO",
+        "municipalityIstatCode": 21076,
+        "totalToday": 53,
+        "totalYesterday": 52,
+        "increaseSinceDayBefore": 1,
+        "activePositives": 26
+    },
+    {
+        "municipality": "SAN CANDIDO",
+        "municipalityIstatCode": 21077,
+        "totalToday": 52,
+        "totalYesterday": 48,
+        "increaseSinceDayBefore": 4,
+        "activePositives": 28
+    },
+    {
+        "municipality": "SAN GENESIO ATESINO",
+        "municipalityIstatCode": 21079,
+        "totalToday": 32,
+        "totalYesterday": 32,
+        "increaseSinceDayBefore": 0,
+        "activePositives": 12
+    },
+    {
+        "municipality": "SAN LEONARDO IN PASSIRIA",
+        "municipalityIstatCode": 21080,
+        "totalToday": 48,
+        "totalYesterday": 46,
+        "increaseSinceDayBefore": 2,
+        "activePositives": 9
+    },
+    {
+        "municipality": "SAN LORENZO DI SEBATO",
+        "municipalityIstatCode": 21081,
+        "totalToday": 47,
+        "totalYesterday": 41,
+        "increaseSinceDayBefore": 6,
+        "activePositives": 28
+    },
+    {
+        "municipality": "SAN MARTINO IN BADIA",
+        "municipalityIstatCode": 21082,
+        "totalToday": 12,
+        "totalYesterday": 10,
+        "increaseSinceDayBefore": 2,
+        "activePositives": 4
+    },
+    {
+        "municipality": "SAN MARTINO IN PASSIRIA",
+        "municipalityIstatCode": 21083,
+        "totalToday": 19,
+        "totalYesterday": 17,
+        "increaseSinceDayBefore": 2,
+        "activePositives": 9
+    },
+    {
+        "municipality": "SAN PANCRAZIO",
+        "municipalityIstatCode": 21084,
+        "totalToday": 7,
+        "totalYesterday": 7,
+        "increaseSinceDayBefore": 0,
+        "activePositives": 4
+    },
+    {
+        "municipality": "SANTA CRISTINA VALGARDENA",
+        "municipalityIstatCode": 21085,
+        "totalToday": 30,
+        "totalYesterday": 30,
+        "increaseSinceDayBefore": 0,
+        "activePositives": 3
+    },
+    {
+        "municipality": "SARENTINO",
+        "municipalityIstatCode": 21086,
+        "totalToday": 68,
+        "totalYesterday": 61,
+        "increaseSinceDayBefore": 7,
+        "activePositives": 61
+    },
+    {
+        "municipality": "SCENA",
+        "municipalityIstatCode": 21087,
+        "totalToday": 11,
+        "totalYesterday": 9,
+        "increaseSinceDayBefore": 2,
+        "activePositives": 8
+    },
+    {
+        "municipality": "SELVA DEI MOLINI",
+        "municipalityIstatCode": 21088,
+        "totalToday": 8,
+        "totalYesterday": 8,
+        "increaseSinceDayBefore": 0,
+        "activePositives": 4
+    },
+    {
+        "municipality": "SELVA DI VAL GARDENA",
+        "municipalityIstatCode": 21089,
+        "totalToday": 52,
+        "totalYesterday": 51,
+        "increaseSinceDayBefore": 1,
+        "activePositives": 1
+    },
+    {
+        "municipality": "SENALES",
+        "municipalityIstatCode": 21091,
+        "totalToday": 3,
+        "totalYesterday": 3,
+        "increaseSinceDayBefore": 0,
+        "activePositives": 3
+    },
+    {
+        "municipality": "SENALE-SAN FELICE",
+        "municipalityIstatCode": 21118,
+        "totalToday": 5,
+        "totalYesterday": 5,
+        "increaseSinceDayBefore": 0,
+        "activePositives": 0
+    },
+    {
+        "municipality": "SESTO",
+        "municipalityIstatCode": 21092,
+        "totalToday": 158,
+        "totalYesterday": 157,
+        "increaseSinceDayBefore": 1,
+        "activePositives": 134
+    },
+    {
+        "municipality": "SILANDRO",
+        "municipalityIstatCode": 21093,
+        "totalToday": 23,
+        "totalYesterday": 21,
+        "increaseSinceDayBefore": 2,
+        "activePositives": 16
+    },
+    {
+        "municipality": "SLUDERNO",
+        "municipalityIstatCode": 21094,
+        "totalToday": 7,
+        "totalYesterday": 7,
+        "increaseSinceDayBefore": 0,
+        "activePositives": 6
+    },
+    {
+        "municipality": "STELVIO",
+        "municipalityIstatCode": 21095,
+        "totalToday": 5,
+        "totalYesterday": 5,
+        "increaseSinceDayBefore": 0,
+        "activePositives": 1
+    },
+    {
+        "municipality": "TERENTO",
+        "municipalityIstatCode": 21096,
+        "totalToday": 4,
+        "totalYesterday": 4,
+        "increaseSinceDayBefore": 0,
+        "activePositives": 2
+    },
+    {
+        "municipality": "TERLANO",
+        "municipalityIstatCode": 21097,
+        "totalToday": 106,
+        "totalYesterday": 104,
+        "increaseSinceDayBefore": 2,
+        "activePositives": 54
+    },
+    {
+        "municipality": "TERMENO SULLA STRADA DEL VINO",
+        "municipalityIstatCode": 21098,
+        "totalToday": 26,
+        "totalYesterday": 25,
+        "increaseSinceDayBefore": 1,
+        "activePositives": 18
+    },
+    {
+        "municipality": "TESIMO",
+        "municipalityIstatCode": 21099,
+        "totalToday": 34,
+        "totalYesterday": 31,
+        "increaseSinceDayBefore": 3,
+        "activePositives": 12
+    },
+    {
+        "municipality": "TIRES",
+        "municipalityIstatCode": 21100,
+        "totalToday": 6,
+        "totalYesterday": 6,
+        "increaseSinceDayBefore": 0,
+        "activePositives": 2
+    },
+    {
+        "municipality": "TIROLO",
+        "municipalityIstatCode": 21101,
+        "totalToday": 12,
+        "totalYesterday": 11,
+        "increaseSinceDayBefore": 1,
+        "activePositives": 7
+    },
+    {
+        "municipality": "TRODENA NEL PARCO NATURALE",
+        "municipalityIstatCode": 21102,
+        "totalToday": 9,
+        "totalYesterday": 8,
+        "increaseSinceDayBefore": 1,
+        "activePositives": 2
+    },
+    {
+        "municipality": "TUBRE",
+        "municipalityIstatCode": 21103,
+        "totalToday": 7,
+        "totalYesterday": 7,
+        "increaseSinceDayBefore": 0,
+        "activePositives": 7
+    },
+    {
+        "municipality": "ULTIMO",
+        "municipalityIstatCode": 21104,
+        "totalToday": 4,
+        "totalYesterday": 3,
+        "increaseSinceDayBefore": 1,
+        "activePositives": 2
+    },
+    {
+        "municipality": "VADENA",
+        "municipalityIstatCode": 21105,
+        "totalToday": 18,
+        "totalYesterday": 17,
+        "increaseSinceDayBefore": 1,
+        "activePositives": 10
+    },
+    {
+        "municipality": "VAL DI VIZZE",
+        "municipalityIstatCode": 21107,
+        "totalToday": 64,
+        "totalYesterday": 59,
+        "increaseSinceDayBefore": 5,
+        "activePositives": 39
+    },
+    {
+        "municipality": "VALDAORA",
+        "municipalityIstatCode": 21106,
+        "totalToday": 33,
+        "totalYesterday": 27,
+        "increaseSinceDayBefore": 6,
+        "activePositives": 23
+    },
+    {
+        "municipality": "VALLE AURINA",
+        "municipalityIstatCode": 21108,
+        "totalToday": 50,
+        "totalYesterday": 48,
+        "increaseSinceDayBefore": 2,
+        "activePositives": 35
+    },
+    {
+        "municipality": "VALLE DI CASIES",
+        "municipalityIstatCode": 21109,
+        "totalToday": 20,
+        "totalYesterday": 19,
+        "increaseSinceDayBefore": 1,
+        "activePositives": 6
+    },
+    {
+        "municipality": "VANDOIES",
+        "municipalityIstatCode": 21110,
+        "totalToday": 25,
+        "totalYesterday": 25,
+        "increaseSinceDayBefore": 0,
+        "activePositives": 9
+    },
+    {
+        "municipality": "VARNA",
+        "municipalityIstatCode": 21111,
+        "totalToday": 40,
+        "totalYesterday": 39,
+        "increaseSinceDayBefore": 1,
+        "activePositives": 18
+    },
+    {
+        "municipality": "VELTURNO",
+        "municipalityIstatCode": 21116,
+        "totalToday": 33,
+        "totalYesterday": 31,
+        "increaseSinceDayBefore": 2,
+        "activePositives": 22
+    },
+    {
+        "municipality": "VERANO",
+        "municipalityIstatCode": 21112,
+        "totalToday": 1,
+        "totalYesterday": 1,
+        "increaseSinceDayBefore": 0,
+        "activePositives": 0
+    },
+    {
+        "municipality": "VILLABASSA",
+        "municipalityIstatCode": 21113,
+        "totalToday": 50,
+        "totalYesterday": 50,
+        "increaseSinceDayBefore": 0,
+        "activePositives": 18
+    },
+    {
+        "municipality": "VILLANDRO",
+        "municipalityIstatCode": 21114,
+        "totalToday": 21,
+        "totalYesterday": 21,
+        "increaseSinceDayBefore": 0,
+        "activePositives": 18
+    },
+    {
+        "municipality": "VIPITENO",
+        "municipalityIstatCode": 21115,
+        "totalToday": 84,
+        "totalYesterday": 80,
+        "increaseSinceDayBefore": 4,
+        "activePositives": 49
+    },
+    { "municipalityUnknownToday": 36 },
+    { "totalSum": { "positivesUntilToday": 7835, "positivesToday": 350, "activePostitivesUntilToday": 4561 } },
+    { "hospitalNumbers": { "normalBed": 163, "normalBedPrivateHospital": 70, "gossensass": 42, "intensiveCare": 19 } }
+]
