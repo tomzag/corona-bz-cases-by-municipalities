@@ -5,7 +5,7 @@ const puppeteer = require("puppeteer");
 
 // Scrape data from this URL
 // URL has to be changed manually every day
-const pressPostUrl = "https://www.sabes.it/de/news.asp?aktuelles_action=4&aktuelles_article_id=644995";
+const pressPostUrl = "https://www.sabes.it/de/news.asp?aktuelles_action=4&aktuelles_article_id=645008";
 
 const listOfMunicipalities = [
     "ALDINO",
@@ -136,7 +136,7 @@ async function main() {
         await page.goto(pressPostUrl);
 
         async function getXlsxUrl() {
-            const [el] = await page.$x('//*[@id="content"]/div[2]/div/div[1]/ol/li[2]/a');
+            const [el] = await page.$x('//*[@id="content"]/div[2]/div/div[1]/ol/li[1]/a');
             const href = await el.getProperty("href");
             const hrefText = await href.jsonValue();
             return hrefText;
@@ -180,7 +180,7 @@ async function main() {
 
     fetch(xlsxUrl)
         .then(async function (res) {
-            if (!res.ok) throw new Error("fetch failed");
+            if (!res.ok) throw new Error(res);
             return res.arrayBuffer();
         })
         .then(function (ab) {
@@ -198,7 +198,7 @@ async function main() {
 
             // Newest date in sheet (get it it from cell E3)
             let dt = sheetContent.F3.v.replace("Gesamt - Totale", "");
-            
+
             // Loop through 2000 rows
             for (let i = 0; i < 2000; i++) {
                 let cellMunicipality = "C" + i,
