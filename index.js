@@ -203,7 +203,7 @@ async function main() {
             let dt = sheetContent.F3.v.replace("Gesamt - Totale", "");
 
             // Loop through 2000 rows
-            for (let i = 0; i < 2000; i++) {
+            for (let i = 0; i < 2500; i++) {
                 let cellMunicipality = "C" + i,
                     cellTotalPositivesToday = "F" + i,
                     cellTotalPositivesYesterday = "E" + i,
