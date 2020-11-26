@@ -5,7 +5,7 @@ const puppeteer = require("puppeteer");
 
 // Scrape data from this URL
 // URL has to be changed manually every day
-const pressPostUrl = "https://www.sabes.it/de/news.asp?aktuelles_action=4&aktuelles_article_id=645880";
+const pressPostUrl = "https://www.sabes.it/de/news.asp?aktuelles_action=4&aktuelles_article_id=645925";
 
 const listOfMunicipalities = [
     "ALDINO",
@@ -202,16 +202,16 @@ async function main() {
             // Newest date in sheet (get it it from cell E3)
             let dt = sheetContent.F3.v.replace("Gesamt - Totale", "");
 
-            // Loop through 2000 rows
-            for (let i = 0; i < 2500; i++) {
+            // Loop through 4000 rows
+            for (let i = 0; i < 4000; i++) {
                 let cellMunicipality = "C" + i,
                     cellTotalPositivesToday = "F" + i,
                     cellTotalPositivesYesterday = "E" + i,
-                    cellActivePositives = "N" + i;
+                    cellActivePositives = "H" + i;
+                cellTotalActivePositivesUntilToday = "H" + i;
                 cellMunicipalityUnknownToday = "G" + i;
                 cellTotalPositivesOfAllMunicipalitiesToday = "G" + i;
                 cellTotalPositivesOfAllMunicipalitiesUntilToday = "F" + i;
-                cellTotalActivePositivesUntilToday = "N" + i;
                 cellIstatCode = "A" + i;
 
                 if (sheetContent[cellMunicipality] !== undefined) {
