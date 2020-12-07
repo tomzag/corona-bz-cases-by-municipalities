@@ -5,7 +5,7 @@ const puppeteer = require("puppeteer");
 
 // Scrape data from this URL
 // URL has to be changed manually every day
-const pressPostUrl = "https://www.sabes.it/de/news.asp?aktuelles_action=4&aktuelles_article_id=646307";
+const pressPostUrl = "https://www.sabes.it/de/news.asp?aktuelles_action=4&aktuelles_article_id=646310";
 
 const listOfMunicipalities = [
     "ALDINO",
@@ -211,7 +211,7 @@ async function main() {
                 cellTotalActivePositivesUntilToday = "K" + i;
                 cellMunicipalityUnknownToday = "G" + i;
                 cellTotalPositivesOfAllMunicipalitiesToday = "G" + i;
-                cellTotalPositivesOfAllMunicipalitiesUntilToday = "F" + i;
+                cellTotalPositivesOfAllMunicipalitiesUntilToday = cellTotalActivePositivesUntilToday;
                 cellIstatCode = "A" + i;
 
                 if (sheetContent[cellMunicipality] !== undefined) {
