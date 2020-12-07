@@ -207,11 +207,11 @@ async function main() {
                 let cellMunicipality = "C" + i,
                     cellTotalPositivesToday = "F" + i,
                     cellTotalPositivesYesterday = "E" + i,
-                    cellActivePositives = "K" + i;
-                cellTotalActivePositivesUntilToday = "K" + i;
+                    cellActivePositives = "N" + i;
+                cellTotalActivePositivesUntilToday = "N" + i;
                 cellMunicipalityUnknownToday = "G" + i;
                 cellTotalPositivesOfAllMunicipalitiesToday = "G" + i;
-                cellTotalPositivesOfAllMunicipalitiesUntilToday = cellTotalActivePositivesUntilToday;
+                cellTotalPositivesOfAllMunicipalitiesUntilToday = "F" + i;
                 cellIstatCode = "A" + i;
 
                 if (sheetContent[cellMunicipality] !== undefined) {
