@@ -5,7 +5,7 @@ const puppeteer = require("puppeteer");
 
 // Scrape data from this URL
 // URL has to be changed manually every day
-const pressPostUrl = "https://www.sabes.it/de/news.asp?aktuelles_action=4&aktuelles_article_id=650862";
+const pressPostUrl = "https://www.sabes.it/de/news.asp?aktuelles_action=4&aktuelles_article_id=650873";
 
 const listOfMunicipalities = [
     "ALDINO",
@@ -136,7 +136,7 @@ async function main() {
         await page.goto(pressPostUrl);
 
         async function getXlsxUrl() {
-            const [el] = await page.$x('//*[@id="content"]/div[2]/div/div[1]/ol/li[2]/a');
+            const [el] = await page.$x('//*[@id="content"]/div[2]/div/div[1]/ol/li[1]/a');
             const href = await el.getProperty("href");
             const hrefText = await href.jsonValue();
             return hrefText;
@@ -207,7 +207,7 @@ async function main() {
                 let cellMunicipality = "C" + i,
                     cellTotalPositivesToday = "F" + i,
                     cellTotalPositivesYesterday = "E" + i,
-                    cellActivePositives = "N" + i;
+                    cellActivePositives = "K" + i;
                 cellMunicipalityUnknownToday = "G" + i;
                 cellTotalPositivesOfAllMunicipalitiesToday = "G" + i;
                 cellTotalPositivesOfAllMunicipalitiesUntilToday = "F" + i;
