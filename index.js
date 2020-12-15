@@ -5,7 +5,7 @@ const puppeteer = require("puppeteer");
 
 // Scrape data from this URL
 // URL has to be changed manually every day
-const pressPostUrl = "https://www.sabes.it/de/news.asp?aktuelles_action=4&aktuelles_article_id=650873";
+const pressPostUrl = "https://www.sabes.it/de/news.asp?aktuelles_action=4&aktuelles_article_id=650926";
 
 const listOfMunicipalities = [
     "ALDINO",
@@ -136,9 +136,20 @@ async function main() {
         await page.goto(pressPostUrl);
 
         async function getXlsxUrl() {
-            const [el] = await page.$x('//*[@id="content"]/div[2]/div/div[1]/ol/li[1]/a');
-            const href = await el.getProperty("href");
-            const hrefText = await href.jsonValue();
+            let [el] = await page.$x('//*[@id="content"]/div[2]/div/div[1]/ol/li[1]/a');
+            const title = await el.getProperty("title");
+            const titleText = await title.jsonValue();
+
+            let href;
+            let hrefText;
+            if (titleText.includes("positiv")) {
+                href = await el.getProperty("href");
+                hrefText = await href.jsonValue();
+            } else {
+                [el] = await page.$x('//*[@id="content"]/div[2]/div/div[1]/ol/li[2]/a');
+                href = await el.getProperty("href");
+                hrefText = await href.jsonValue();
+            }
             return hrefText;
         }
 
@@ -202,12 +213,55 @@ async function main() {
             // Newest date in sheet (get it it from cell E3)
             let dt = sheetContent.F3.v.replace("Gesamt - Totale", "");
 
+            // Get column for "Positiv getestete abzüglich Geheilte und Verstorbene"
+            const alphabet = [
+                "A",
+                "B",
+                "C",
+                "D",
+                "E",
+                "F",
+                "G",
+                "H",
+                "I",
+                "J",
+                "K",
+                "L",
+                "M",
+                "N",
+                "O",
+                "P",
+                "Q",
+                "R",
+                "S",
+                "T",
+                "U",
+                "V",
+                "W",
+                "X",
+                "Y",
+                "Z",
+            ];
+
+            // Find active positives column
+            let columnActivePositives;
+            for (let i = 0; i < 26; i++) {
+                if (sheetContent[alphabet[i] + "3"] !== undefined)
+                    if (
+                        sheetContent[alphabet[i] + "3"].v.includes(
+                            "Positiv getestete abzüglich Geheilte und Verstorbene"
+                        )
+                    ) {
+                        columnActivePositives = alphabet[i];
+                    }
+            }
+
             // Loop through 4000 rows
             for (let i = 0; i < 4000; i++) {
                 let cellMunicipality = "C" + i,
                     cellTotalPositivesToday = "F" + i,
                     cellTotalPositivesYesterday = "E" + i,
-                    cellActivePositives = "K" + i;
+                    cellActivePositives = columnActivePositives + i;
                 cellMunicipalityUnknownToday = "G" + i;
                 cellTotalPositivesOfAllMunicipalitiesToday = "G" + i;
                 cellTotalPositivesOfAllMunicipalitiesUntilToday = "F" + i;
