@@ -5,7 +5,7 @@ const puppeteer = require("puppeteer");
 
 // Scrape data from this URL
 // URL has to be changed manually every day
-const pressPostUrl = "https://www.sabes.it/de/news.asp?aktuelles_action=4&aktuelles_article_id=650926";
+const pressPostUrl = "https://www.sabes.it/de/news.asp?aktuelles_action=4&aktuelles_article_id=650976";
 
 const listOfMunicipalities = [
     "ALDINO",
@@ -213,7 +213,7 @@ async function main() {
             // Newest date in sheet (get it it from cell E3)
             let dt = sheetContent.F3.v.replace("Gesamt - Totale", "");
 
-            // Get column for "Positiv getestete abzüglich Geheilte und Verstorbene"
+            // Get column "Positiv getestete abzüglich Geheilte und Verstorbene"
             const alphabet = [
                 "A",
                 "B",
@@ -243,7 +243,6 @@ async function main() {
                 "Z",
             ];
 
-            // Find active positives column
             let columnActivePositives;
             for (let i = 0; i < 26; i++) {
                 if (sheetContent[alphabet[i] + "3"] !== undefined)
