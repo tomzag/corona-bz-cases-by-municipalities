@@ -5,7 +5,7 @@ const puppeteer = require("puppeteer");
 
 // Scrape data from this URL
 // URL has to be changed manually every day
-const pressPostUrl = "https://www.sabes.it/de/news.asp?aktuelles_action=4&aktuelles_article_id=651018";
+const pressPostUrl = "https://www.sabes.it/de/news.asp?aktuelles_action=4&aktuelles_article_id=651084";
 
 const listOfMunicipalities = [
     "ALDINO",
@@ -213,7 +213,6 @@ async function main() {
             // Newest date in sheet (get it it from cell E3)
             let dt = sheetContent.F3.v.replace("Gesamt - Totale", "");
 
-            // Get column "Positiv getestete abzüglich Geheilte und Verstorbene"
             const alphabet = [
                 "A",
                 "B",
@@ -244,14 +243,20 @@ async function main() {
             ];
 
             let columnActivePositives;
+            let columnAntigenTest;
+            let columnAntigenTestNewToday;
             for (let i = 0; i < 26; i++) {
                 if (sheetContent[alphabet[i] + "3"] !== undefined)
+                    // Get column "Positiv getestete abzüglich Geheilte und Verstorbene"
                     if (
                         sheetContent[alphabet[i] + "3"].v.includes(
                             "Positiv getestete abzüglich Geheilte und Verstorbene"
                         )
                     ) {
                         columnActivePositives = alphabet[i];
+                    } else if (sheetContent[alphabet[i] + "3"].v.includes("TEST AG")) {
+                        columnAntigenTest = alphabet[i];
+                        columnAntigenTestNewToday = alphabet[i+1];
                     }
             }
 
@@ -265,6 +270,9 @@ async function main() {
                 cellTotalPositivesOfAllMunicipalitiesToday = "G" + i;
                 cellTotalPositivesOfAllMunicipalitiesUntilToday = "F" + i;
                 cellIstatCode = "A" + i;
+                cellAntigenTest = columnAntigenTest + i;
+                cellAntigenTestNewToday = columnAntigenTestNewToday + i;
+
 
                 if (sheetContent[cellMunicipality] !== undefined) {
                     // Get rows which contain the string "Comune sconosciuto Totale"
@@ -321,6 +329,10 @@ async function main() {
                                 activePositives:
                                     sheetContent[cellActivePositives] !== undefined &&
                                     sheetContent[cellActivePositives].v,
+                                antigen: sheetContent[cellAntigenTest] !== undefined && sheetContent[cellAntigenTest].v,
+                                antigenNewToday:
+                                    sheetContent[cellAntigenTestNewToday] !== undefined &&
+                                    sheetContent[cellAntigenTestNewToday].v,
                             });
                         }
                     }
