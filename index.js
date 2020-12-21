@@ -5,7 +5,7 @@ const puppeteer = require("puppeteer");
 
 // Scrape data from this URL
 // URL has to be changed manually every day
-const pressPostUrl = "https://www.sabes.it/de/news.asp?aktuelles_action=4&aktuelles_article_id=651127";
+const pressPostUrl = "https://www.sabes.it/de/news.asp?aktuelles_action=4&aktuelles_article_id=651144";
 
 const listOfMunicipalities = [
     "ALDINO",
@@ -161,19 +161,19 @@ async function main() {
                 let valueHandle = await paragraphs[i].getProperty("innerText");
                 let paragraphText = await valueHandle.jsonValue();
 
-                if (paragraphText.includes("Auf Normalstationen im Krankenhaus")) {
+                if (paragraphText.includes("Auf Normalstationen")) {
                     inHospital.hospitalNumbers.normalBed = Number(paragraphText.split(":").pop());
                 }
 
-                if (paragraphText.includes("In Privatkliniken")) {
+                if (paragraphText.includes("Privatkliniken")) {
                     inHospital.hospitalNumbers.normalBedPrivateHospital = Number(paragraphText.split(":").pop());
                 }
 
-                if (paragraphText.includes("in Intensivbetreuung")) {
+                if (paragraphText.includes("Intensivbetreuung")) {
                     inHospital.hospitalNumbers.intensiveCare = Number(paragraphText.split(":").pop());
                 }
 
-                if (paragraphText.includes("In Gossensaß")) {
+                if (paragraphText.includes("Gossensaß")) {
                     let gossensass = paragraphText.split(":").pop();
                     gossensass = gossensass.split("(");
                     gossensass = Number(gossensass[0]);
@@ -272,6 +272,7 @@ async function main() {
                 cellIstatCode = "A" + i;
                 cellAntigenTest = columnAntigenTest + i;
                 cellAntigenTestNewToday = columnAntigenTestNewToday + i;
+                cellAntigenPositivesToday = columnAntigenTestNewToday + i;
 
 
                 if (sheetContent[cellMunicipality] !== undefined) {
@@ -303,6 +304,9 @@ async function main() {
                                 activePostitivesUntilToday:
                                     sheetContent[cellActivePositives] !== undefined &&
                                     sheetContent[cellActivePositives].v,
+                                antigenPositivesToday:
+                                    sheetContent[cellAntigenPositivesToday] !== undefined &&
+                                    sheetContent[cellAntigenPositivesToday].v,
                             },
                         });
                     }
@@ -353,7 +357,7 @@ async function main() {
                 todaysDate_formatted = formatDate(todaysDate);
 
             // check if data is from today
-            if (newestDateInSheet_formatted === todaysDate_formatted) {
+            // if (newestDateInSheet_formatted === todaysDate_formatted) {
                 //save in file
                 fse.outputFile(`output/${newestDateInSheet_formatted}.json`, JSON.stringify(covid_data), (err) => {
                     if (err) {
@@ -362,9 +366,9 @@ async function main() {
                         console.log("The file was saved!");
                     }
                 });
-            } else {
-                console.log("Data is not from today!");
-            }
+            // } else {
+            //     console.log("Data is not from today!");
+            // }
         })
         .catch((error) => {
             console.log(error);
