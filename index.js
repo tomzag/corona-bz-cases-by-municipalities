@@ -5,7 +5,7 @@ const puppeteer = require("puppeteer");
 
 // Scrape data from this URL
 // URL has to be changed manually every day
-const pressPostUrl = "https://www.sabes.it/de/news.asp?aktuelles_action=4&aktuelles_article_id=651144";
+const pressPostUrl = "https://www.sabes.it/de/news.asp?aktuelles_action=4&aktuelles_article_id=651194";
 
 const listOfMunicipalities = [
     "ALDINO",
@@ -211,7 +211,7 @@ async function main() {
             const covid_data = [];
 
             // Newest date in sheet (get it it from cell E3)
-            let dt = sheetContent.F3.v.replace("Gesamt - Totale", "");
+            let dt = sheetContent.G3.v.replace("Gesamt - Totale", "");
 
             const alphabet = [
                 "A",
@@ -262,14 +262,14 @@ async function main() {
 
             // Loop through 4000 rows
             for (let i = 0; i < 4000; i++) {
-                let cellMunicipality = "C" + i,
-                    cellTotalPositivesToday = "F" + i,
-                    cellTotalPositivesYesterday = "E" + i,
+                let cellMunicipality = "D" + i,
+                    cellTotalPositivesToday = "G" + i,
+                    cellTotalPositivesYesterday = "F" + i,
                     cellActivePositives = columnActivePositives + i;
-                cellMunicipalityUnknownToday = "G" + i;
-                cellTotalPositivesOfAllMunicipalitiesToday = "G" + i;
-                cellTotalPositivesOfAllMunicipalitiesUntilToday = "F" + i;
-                cellIstatCode = "A" + i;
+                cellMunicipalityUnknownToday = "H" + i;
+                cellTotalPositivesOfAllMunicipalitiesToday = "H" + i;
+                cellTotalPositivesOfAllMunicipalitiesUntilToday = "G" + i;
+                cellIstatCode = "B" + i;
                 cellAntigenTest = columnAntigenTest + i;
                 cellAntigenTestNewToday = columnAntigenTestNewToday + i;
                 cellAntigenPositivesToday = columnAntigenTestNewToday + i;
@@ -357,8 +357,7 @@ async function main() {
                 todaysDate_formatted = formatDate(todaysDate);
 
             // check if data is from today
-            // if (newestDateInSheet_formatted === todaysDate_formatted) {
-                //save in file
+            if (newestDateInSheet_formatted === todaysDate_formatted) {
                 fse.outputFile(`output/${newestDateInSheet_formatted}.json`, JSON.stringify(covid_data), (err) => {
                     if (err) {
                         console.log(err);
@@ -366,9 +365,9 @@ async function main() {
                         console.log("The file was saved!");
                     }
                 });
-            // } else {
-            //     console.log("Data is not from today!");
-            // }
+            } else {
+                console.log("Data is not from today!");
+            }
         })
         .catch((error) => {
             console.log(error);
