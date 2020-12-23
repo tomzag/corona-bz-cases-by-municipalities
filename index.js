@@ -5,7 +5,7 @@ const puppeteer = require("puppeteer");
 
 // Scrape data from this URL
 // URL has to be changed manually every day
-const pressPostUrl = "https://www.sabes.it/de/news.asp?aktuelles_action=4&aktuelles_article_id=651194";
+const pressPostUrl = "https://www.sabes.it/de/news.asp?aktuelles_action=4&aktuelles_article_id=651261";
 
 const listOfMunicipalities = [
     "ALDINO",
@@ -211,7 +211,7 @@ async function main() {
             const covid_data = [];
 
             // Newest date in sheet (get it it from cell E3)
-            let dt = sheetContent.G3.v.replace("Gesamt - Totale", "");
+            let dt = sheetContent.F3.v.replace("Gesamt - Totale", "");
 
             const alphabet = [
                 "A",
@@ -263,12 +263,12 @@ async function main() {
             // Loop through 4000 rows
             for (let i = 0; i < 4000; i++) {
                 let cellMunicipality = "D" + i,
-                    cellTotalPositivesToday = "G" + i,
-                    cellTotalPositivesYesterday = "F" + i,
+                    cellTotalPositivesToday = "F" + i,
+                    cellTotalPositivesYesterday = "E" + i,
                     cellActivePositives = columnActivePositives + i;
-                cellMunicipalityUnknownToday = "H" + i;
-                cellTotalPositivesOfAllMunicipalitiesToday = "H" + i;
-                cellTotalPositivesOfAllMunicipalitiesUntilToday = "G" + i;
+                cellMunicipalityUnknownToday = "G" + i;
+                cellTotalPositivesOfAllMunicipalitiesToday = "G" + i;
+                cellTotalPositivesOfAllMunicipalitiesUntilToday = "F" + i;
                 cellIstatCode = "B" + i;
                 cellAntigenTest = columnAntigenTest + i;
                 cellAntigenTestNewToday = columnAntigenTestNewToday + i;
