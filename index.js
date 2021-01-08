@@ -5,7 +5,7 @@ const puppeteer = require("puppeteer");
 
 // Scrape data from this URL
 // URL has to be changed manually every day
-const pressPostUrl = "https://www.sabes.it/de/news.asp?aktuelles_action=4&aktuelles_article_id=651555";
+const pressPostUrl = "https://www.sabes.it/de/news.asp?aktuelles_action=4&aktuelles_article_id=651594";
 
 const listOfMunicipalities = [
     "ALDINO",
