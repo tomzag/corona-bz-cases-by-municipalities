@@ -5,7 +5,7 @@ const puppeteer = require("puppeteer");
 
 // Scrape data from this URL
 // URL has to be changed manually every day
-const pressPostUrl = "https://www.sabes.it/de/news.asp?aktuelles_action=4&aktuelles_article_id=651627";
+const pressPostUrl = "https://www.sabes.it/de/news.asp?aktuelles_action=4&aktuelles_article_id=651640";
 
 const listOfMunicipalities = [
     "ALDINO",
@@ -142,7 +142,7 @@ async function main() {
 
             let href;
             let hrefText;
-            if (titleText.includes("Positiven")) {
+            if (titleText.includes("positiv")) {
                 href = await el.getProperty("href");
                 hrefText = await href.jsonValue();
             } else {
