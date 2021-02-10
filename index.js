@@ -5,7 +5,7 @@ const puppeteer = require("puppeteer");
 
 // Scrape data from this URL
 // URL has to be changed manually every day
-const pressPostUrl = "https://www.sabes.it/de/news.asp?aktuelles_action=4&aktuelles_article_id=652591";
+const pressPostUrl = "https://www.sabes.it/de/news.asp?aktuelles_action=4&aktuelles_article_id=652661";
 
 const listOfMunicipalities = [
     "ALDINO",
@@ -169,8 +169,12 @@ async function main() {
                     inHospital.hospitalNumbers.normalBedPrivateHospital = Number(paragraphText.split(":").pop());
                 }
 
-                if (paragraphText.includes("Intensivbetreuung")) {
-                    inHospital.hospitalNumbers.intensiveCare = Number(paragraphText.split(":").pop());
+                if (paragraphText.includes("Intensivstationen aufgenommenen Covid-Patienten/Patientinnen")) {
+                    let icu = paragraphText.split(":").pop();
+                    icu = icu.split("(");
+                    console.log(icu);
+                    icu = Number(icu[0]);
+                    inHospital.hospitalNumbers.intensiveCare = icu;
                 }
 
                 if (paragraphText.includes("Gossensaß")) {
